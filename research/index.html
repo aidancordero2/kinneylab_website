@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research Highlights | Kinney Lab</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@300;400;600&family=DM+Sans:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../research.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="/" class="nav-logo">Kinney Lab</a>
+            <ul class="nav-menu">
+                <li><a href="/" class="nav-link">Home</a></li>
+                <li><a href="/research/" class="nav-link nav-link-stacked active">Research<br>Highlights</a></li>
+                <li><a href="/software/" class="nav-link">Software</a></li>
+                <li><a href="/team/" class="nav-link">People</a></li>
+                <li><a href="/publications/" class="nav-link">Publications</a></li>
+                <li><a href="/contact/" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <section class="research-areas-detail">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Selected Publications</h2>
+                    <div class="header-line"></div>
+                </div>
+                <div class="selected-publications" id="selected-publications-container">
+                    <p class="loading-message">Loading selected publications...</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js" crossorigin="anonymous"></script>
+    <script src="../script.js"></script>
+</body>
+</html>

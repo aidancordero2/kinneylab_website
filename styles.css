@@ -1,0 +1,409 @@
+:root {
+    --primary: #2c3e50;
+    --primary-dark: #1a252f;
+    --accent: #3498db;
+    --accent-hover: #2980b9;
+    --text-dark: #2c3e50;
+    --text-medium: #555;
+    --text-light: #777;
+    --bg-white: #ffffff;
+    --bg-light: #f8f9fa;
+    --border: #e5e5e5;
+    --shadow: rgba(0, 0, 0, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    color: var(--text-dark);
+    background: var(--bg-white);
+    line-height: 1.8;
+    font-size: 1.1rem;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: var(--bg-white);
+    z-index: 1000;
+    border-bottom: 1px solid var(--border);
+}
+
+.nav-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+}
+
+.nav-logo {
+    font-family: 'Crimson Pro', Georgia, serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #000000;
+    text-decoration: none;
+}
+
+.nav-logo:hover {
+    color: #333333;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 0;
+}
+
+.nav-link {
+    color: #333333;
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+    padding: 1.1rem 1.25rem;
+    display: block;
+    transition: all 0.2s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: #000000;
+    background: #f5f5f5;
+}
+
+.nav-link-stacked {
+    line-height: 1.25;
+    font-size: 0.88rem;
+    padding: 0.65rem 0.85rem;
+}
+
+/* Hero Section */
+.hero {
+    padding: 6rem 0 3rem 0;
+    background: var(--bg-white);
+}
+
+.hero-centered {
+    text-align: center;
+    max-width: 1000px;
+    margin: 0 auto 3rem;
+}
+
+.hero-location {
+    font-size: 0.95rem;
+    color: var(--text-light);
+    letter-spacing: 0.03em;
+    margin-bottom: 0.5rem;
+}
+
+.hero-logo {
+    margin-bottom: 1.5rem;
+}
+
+.hero-logo img {
+    max-width: 350px;
+    width: 100%;
+    height: auto;
+}
+
+.hero-tagline {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: var(--text-medium);
+    margin-bottom: 1.5rem;
+    white-space: nowrap;
+}
+
+.hero-cta {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.hero-cta .btn {
+    flex-shrink: 0;
+    white-space: nowrap;
+}
+
+.hero-about {
+    max-width: 720px;
+    margin: 0 auto;
+}
+
+.hero-about p {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: var(--text-medium);
+    margin-bottom: 1.5rem;
+}
+
+.about-column h3 {
+    font-family: 'Crimson Pro', Georgia, serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #000000;
+    margin-bottom: 0.75rem;
+}
+
+.about-column p {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: var(--text-medium);
+}
+
+.btn {
+    padding: 0.6rem 1.25rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+    display: inline-block;
+}
+
+.btn-primary {
+    background: #000000;
+    color: white;
+}
+
+.btn-primary:hover {
+    background: var(--accent-hover);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: var(--text-dark);
+    border: 1px solid var(--border);
+}
+
+.btn-secondary:hover {
+    background: var(--bg-light);
+    border-color: var(--text-medium);
+}
+
+/* Sections */
+section {
+    padding: 3rem 0;
+}
+
+.section-header {
+    margin-bottom: 2rem;
+    background: #ffffff;
+}
+
+.section-header h2 {
+    font-family: 'Crimson Pro', Georgia, serif;
+    font-size: 2rem;
+    font-weight: 600;
+    color: #000000;
+    margin-bottom: 0.5rem;
+}
+
+.header-line {
+    width: 50px;
+    height: 3px;
+    background: #000000;
+}
+
+/* Research Preview */
+.research-preview {
+    background: var(--bg-white);
+}
+
+.research-areas {
+    max-width: 800px;
+}
+
+.research-item {
+    padding: 0.75rem 0;
+}
+
+.research-item h3 {
+    font-family: 'Crimson Pro', Georgia, serif;
+    font-size: 1.35rem;
+    font-weight: 600;
+    color: #000000;
+    margin-bottom: 0.25rem;
+}
+
+.research-item p {
+    color: var(--text-medium);
+    line-height: 1.8;
+    font-size: 1.1rem;
+}
+
+.link-arrow {
+    display: inline-block;
+    color: #000000;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.95rem;
+    margin-top: 1rem;
+}
+
+.link-arrow:hover {
+    text-decoration: underline;
+}
+
+/* News Section */
+.news {
+    background: var(--bg-white);
+}
+
+.news-grid {
+    max-width: 700px;
+}
+
+.news-item {
+    padding: 0.75rem 0;
+}
+
+.news-date {
+    color: #000000;
+    font-weight: 600;
+    font-size: 0.85rem;
+    margin-bottom: 0.25rem;
+}
+
+.news-item h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #000000;
+    margin-bottom: 0.25rem;
+}
+
+.news-item p {
+    color: var(--text-medium);
+    line-height: 1.8;
+    font-size: 1.1rem;
+}
+
+/* Site Address */
+.site-address {
+    padding: 2rem 0 3rem;
+    text-align: center;
+    border-top: 1px solid var(--border);
+    margin-top: 2rem;
+}
+
+.site-address p {
+    color: var(--text-medium);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin: 0.25rem 0;
+}
+
+/* Page Hero (for subpages) */
+.page-hero {
+    margin-top: 60px;
+    padding: 2.5rem 0;
+    background: #ffffff;
+    color: #000000;
+}
+
+.page-hero h1 {
+    font-family: 'Crimson Pro', Georgia, serif;
+    font-size: 2.25rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.page-hero p {
+    font-size: 1rem;
+    opacity: 0.85;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-container {
+        flex-direction: column;
+        height: auto;
+        padding: 0.75rem 1rem;
+    }
+    
+    .nav-menu {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0;
+    }
+    
+    .nav-link {
+        padding: 0.5rem 0.75rem;
+        font-size: 0.85rem;
+    }
+    
+    .banner {
+        margin-top: 100px;
+    }
+    
+    .hero-logo img {
+        max-width: 280px;
+    }
+    
+    .hero-tagline {
+        font-size: 1rem;
+        white-space: normal;
+    }
+    
+    
+    .hero-cta {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .section-header h2 {
+        font-size: 1.5rem;
+    }
+    
+    .footer-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    
+    .page-hero {
+        margin-top: 100px;
+    }
+    
+    .page-hero h1 {
+        font-size: 1.75rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 1rem;
+    }
+    
+    section {
+        padding: 2rem 0;
+    }
+    
+    .hero-logo img {
+        max-width: 220px;
+    }
+    
+    .hero-tagline {
+        font-size: 1rem;
+    }
+    
+    .about-column h3 {
+        font-size: 1.2rem;
+    }
+}

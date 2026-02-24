@@ -1,0 +1,120 @@
+.contact-section {
+    padding: 6rem 0 3rem 0;
+    background: var(--bg-white);
+}
+
+.contact-layout {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 4rem;
+}
+
+.contact-content {
+    max-width: 600px;
+    flex: 1;
+}
+
+.contact-logo {
+    flex-shrink: 0;
+}
+
+.contact-logo img {
+    max-width: 280px;
+    height: auto;
+}
+
+.contact-content .section-header {
+    margin-bottom: 1.5rem;
+}
+
+.contact-content .section-header h2 {
+    font-family: 'Crimson Pro', Georgia, serif;
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: #000000;
+    margin-bottom: 0.5rem;
+}
+
+.pi-info {
+    margin-bottom: 3rem;
+}
+
+.pi-name {
+    font-family: 'Crimson Pro', Georgia, serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #000000;
+    margin-bottom: 1.25rem;
+}
+
+.contact-details {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.contact-line {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: var(--text-medium);
+    font-size: 1.1rem;
+}
+
+.contact-line svg {
+    color: #000000;
+    flex-shrink: 0;
+}
+
+.contact-line a {
+    color: #000000;
+    text-decoration: none;
+}
+
+.contact-line a:hover {
+    text-decoration: underline;
+}
+
+.mailing-address {
+    margin-top: 2rem;
+}
+
+.mailing-address p {
+    color: var(--text-medium);
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+@media (max-width: 968px) {
+    .contact-layout {
+        flex-direction: column;
+        gap: 3rem;
+    }
+    
+    .contact-logo {
+        order: -1;
+    }
+    
+    .contact-logo img {
+        max-width: 220px;
+    }
+}
+
+@media (max-width: 768px) {
+    .contact-section {
+        padding: 4rem 0 2rem 0;
+    }
+    
+    .contact-content .section-header h2 {
+        font-size: 1.35rem;
+    }
+    
+    .pi-name {
+        font-size: 1.2rem;
+    }
+    
+    .contact-logo img {
+        max-width: 180px;
+    }
+}
