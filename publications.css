@@ -17,12 +17,12 @@
 }
 
 .pub-year {
-    margin-bottom: 2.5rem;
+    margin-bottom: 1rem;
 }
 
 .pub-year h2 {
     font-family: 'Crimson Pro', Georgia, serif;
-    font-size: 2.5rem;  
+    font-size: 1.6rem;
     font-weight: 600;
     color: #000000;
     display: inline-block;
@@ -31,12 +31,12 @@
 .pub-list {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 0;
 }
 
 .pub-item {
     display: flex;
-    padding: 1rem 0;
+    padding: 0.25rem 0;
     border-bottom: 1px solid var(--border);
 }
 
@@ -49,7 +49,7 @@
     flex-shrink: 0;
     margin-right: 0.75rem;
     font-size: 1.05rem;
-    line-height: 1.4;
+    line-height: 1.3;
 }
 
 .pub-body {
@@ -59,24 +59,24 @@
 
 .pub-title {
     font-family: 'Crimson Pro', Georgia, serif;
-    font-size: 1.35rem;
+    font-size: 1.25rem;
     font-weight: 600;
     color: #1a3a6b;
-    margin-bottom: 0.5rem;
-    line-height: 1.4;
+    margin-bottom: 0.15rem;
+    line-height: 1.3;
 }
 
 .pub-authors {
-    font-size: 1.05rem;
+    font-size: 0.95rem;
     color: #1a3a6b;
-    margin-bottom: 0.25rem;
-    line-height: 1.6;
+    margin-bottom: 0.1rem;
+    line-height: 1.4;
 }
 
 .pub-journal {
-    font-size: 1.05rem;
+    font-size: 0.95rem;
     color: #1a3a6b;
-    margin-bottom: 0.75rem;
+    margin-bottom: 0.3rem;
 }
 
 .pub-citation-link {
