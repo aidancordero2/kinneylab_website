@@ -347,7 +347,7 @@ function createPublicationHTML(pub, number) {
     // Build additional links
     const addLinks = [];
     if (pub.has_pdf === 'TRUE' && pub.has_si === 'TRUE' && pubId)
-        addLinks.push(`<a href="/publications/files/${pubId}/${pubId}_all.pdf" class="pub-link" target="_blank">Combined PDF</a>`);
+        addLinks.push(`<a href="/publications/files/${pubId}/${pubId}_all.pdf" class="pub-link" target="_blank">Main+SI PDF</a>`);
     if (pub.has_pdf === 'TRUE' && pubId)
         addLinks.push(`<a href="/publications/files/${pubId}/${pubId}_main.pdf" class="pub-link" target="_blank">Main PDF</a>`);
     if (pub.has_si === 'TRUE' && pubId)
@@ -357,7 +357,7 @@ function createPublicationHTML(pub, number) {
     if (pub.readthedocs)
         addLinks.push(`<a href="${pub.readthedocs}" class="pub-link" target="_blank">ReadTheDocs</a>`);
     const additionalLinksHTML = addLinks.length > 0
-        ? `<div class="pub-additional-links"><span class="pub-links-label">Additional links:</span> ${addLinks.join(' | ')}</div>`
+        ? `<div class="pub-additional-links">${addLinks.join(' | ')}</div>`
         : '';
     let itemClass = 'pub-item';
     if (pub.led_by_kinney !== 'TRUE') {
