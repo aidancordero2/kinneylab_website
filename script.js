@@ -341,9 +341,24 @@ function createPublicationHTML(pub, number) {
 
     // Link: prefer paper URL, fall back to preprint
     const citationUrl = pub.paper || pub.preprint || '';
-    const codeLink = pub.code ? `<div class="pub-links"><a href="${pub.code}" class="pub-link" target="_blank">Code</a></div>` : '';
-
+    const pubId = (pub.pub_id || '').trim();
     const isPreprint = pub.preprint && !pub.paper;
+
+    // Build additional links
+    const addLinks = [];
+    if (pub.has_pdf === 'TRUE' && pub.has_si === 'TRUE' && pubId)
+        addLinks.push(`<a href="/publications/files/${pubId}/${pubId}_all.pdf" class="pub-link" target="_blank">Combined PDF</a>`);
+    if (pub.has_pdf === 'TRUE' && pubId)
+        addLinks.push(`<a href="/publications/files/${pubId}/${pubId}_main.pdf" class="pub-link" target="_blank">Main PDF</a>`);
+    if (pub.has_si === 'TRUE' && pubId)
+        addLinks.push(`<a href="/publications/files/${pubId}/${pubId}_si.pdf" class="pub-link" target="_blank">SI PDF</a>`);
+    if (pub.github)
+        addLinks.push(`<a href="${pub.github}" class="pub-link" target="_blank">GitHub</a>`);
+    if (pub.readthedocs)
+        addLinks.push(`<a href="${pub.readthedocs}" class="pub-link" target="_blank">ReadTheDocs</a>`);
+    const additionalLinksHTML = addLinks.length > 0
+        ? `<div class="pub-additional-links"><span class="pub-links-label">Additional links:</span> ${addLinks.join(' | ')}</div>`
+        : '';
     let itemClass = 'pub-item';
     if (pub.led_by_kinney !== 'TRUE') {
         itemClass += ' pub-item-collab';
@@ -365,7 +380,7 @@ function createPublicationHTML(pub, number) {
             <span class="pub-number">${number}.</span>
             <div class="pub-body">
                 ${citationHTML}
-                ${codeLink}
+                ${additionalLinksHTML}
             </div>
         </div>
     `;
@@ -426,7 +441,7 @@ async function loadPublications() {
     const container = document.getElementById('publications-container');
     if (!container) return;
     try {
-        const response = await fetch('/backend/scholar_publications.csv');
+        const response = await fetch('/backend/all_publications.csv');
         if (!response.ok) throw new Error('Failed to load CSV');
         const csvText = await response.text();
         const publications = parseCSV(csvText);

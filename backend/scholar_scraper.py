@@ -160,7 +160,7 @@ def parse_publication_row(row):
     
     return pub_data
 
-def save_to_csv(publications, filename='scholar_publications.csv'):
+def save_to_csv(publications, filename='all_publications.csv'):
     """
     Save publications to CSV file
     

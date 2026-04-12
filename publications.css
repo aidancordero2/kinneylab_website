@@ -101,19 +101,23 @@
     color: var(--text-light);
 }
 
-.pub-links {
-    display: flex;
-    gap: 0.5rem;
-    flex-wrap: wrap;
+.pub-additional-links {
+    margin-top: 0.15rem;
+    font-size: 0.85rem;
+}
+
+.pub-links-label {
+    color: var(--text-medium);
+    font-weight: 500;
+    margin-right: 0.3rem;
 }
 
 .pub-link {
-    display: inline-block;
+    display: inline;
     font-size: 0.85rem;
     font-weight: 500;
     color: #3498db;
     text-decoration: none;
-    margin-right: 1rem;
 }
 
 .pub-link:hover {
