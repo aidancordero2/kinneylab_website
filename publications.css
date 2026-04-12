@@ -35,6 +35,7 @@
 }
 
 .pub-item {
+    display: flex;
     padding: 1rem 0;
     border-bottom: 1px solid var(--border);
 }
@@ -43,26 +44,61 @@
     border-bottom: none;
 }
 
+.pub-number {
+    font-weight: 400;
+    flex-shrink: 0;
+    margin-right: 0.75rem;
+    font-size: 1.05rem;
+    line-height: 1.4;
+}
+
+.pub-body {
+    flex: 1;
+    min-width: 0;
+}
+
 .pub-title {
     font-family: 'Crimson Pro', Georgia, serif;
     font-size: 1.35rem;
     font-weight: 600;
-    color: #000000;
+    color: #1a3a6b;
     margin-bottom: 0.5rem;
     line-height: 1.4;
 }
 
 .pub-authors {
     font-size: 1.05rem;
-    color: var(--text-medium);
+    color: #1a3a6b;
     margin-bottom: 0.25rem;
     line-height: 1.6;
 }
 
 .pub-journal {
     font-size: 1.05rem;
-    color: var(--text-light);
+    color: #1a3a6b;
     margin-bottom: 0.75rem;
+}
+
+.pub-citation-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.pub-citation-link:hover {
+    text-decoration: none;
+}
+
+.pub-item-preprint .pub-title,
+.pub-item-preprint .pub-authors,
+.pub-item-preprint .pub-journal {
+    color: #1a7a2e;
+}
+
+.pub-item-collab .pub-title,
+.pub-item-collab .pub-authors,
+.pub-item-collab .pub-journal {
+    color: var(--text-light);
 }
 
 .pub-links {

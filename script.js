@@ -334,33 +334,47 @@ function formatAuthors(authorsStr) {
 }
 
 // Create HTML for a single publication
-function createPublicationHTML(pub) {
+function createPublicationHTML(pub, number) {
     const title = pub.title || '';
     const authors = formatAuthors(pub.authors);
     const venue = pub.venue || '';
-    
-    // Build links HTML - Paper, Preprint, and Code
-    const paperLink = pub.paper ? `<a href="${pub.paper}" class="pub-link" target="_blank">Paper</a>` : '';
-    const preprintLink = pub.preprint ? `<a href="${pub.preprint}" class="pub-link" target="_blank">Preprint</a>` : '';
-    const codeLink = pub.code ? `<a href="${pub.code}" class="pub-link" target="_blank">Code</a>` : '';
-    
-    const linksHTML = [paperLink, preprintLink, codeLink].filter(l => l).join('');
-    const linksSection = linksHTML ? `<div class="pub-links">${linksHTML}</div>` : '';
-    
+
+    // Link: prefer paper URL, fall back to preprint
+    const citationUrl = pub.paper || pub.preprint || '';
+    const codeLink = pub.code ? `<div class="pub-links"><a href="${pub.code}" class="pub-link" target="_blank">Code</a></div>` : '';
+
+    const isPreprint = pub.preprint && !pub.paper;
+    let itemClass = 'pub-item';
+    if (pub.led_by_kinney !== 'TRUE') {
+        itemClass += ' pub-item-collab';
+    } else if (isPreprint) {
+        itemClass += ' pub-item-preprint';
+    }
+
+    const citationInner = `
+                <h3 class="pub-title">${title}</h3>
+                <p class="pub-authors">${authors}</p>
+                <p class="pub-journal"><em>${venue}</em></p>`;
+
+    const citationHTML = citationUrl
+        ? `<a href="${citationUrl}" class="pub-citation-link" target="_blank">${citationInner}</a>`
+        : `<div>${citationInner}</div>`;
+
     return `
-        <div class="pub-item">
-            <h3 class="pub-title">${title}</h3>
-            <p class="pub-authors">${authors}</p>
-            <p class="pub-journal"><em>${venue}</em></p>
-            ${linksSection}
+        <div class="${itemClass}">
+            <span class="pub-number">${number}.</span>
+            <div class="pub-body">
+                ${citationHTML}
+                ${codeLink}
+            </div>
         </div>
     `;
 }
 
 // Create HTML for a year section
-function createYearSectionHTML(year, publications) {
-    const pubsHTML = publications.map(p => createPublicationHTML(p)).join('');
-    
+function createYearSectionHTML(year, numberedPubs) {
+    const pubsHTML = numberedPubs.map(({pub, number}) => createPublicationHTML(pub, number)).join('');
+
     return `
         <div class="pub-year">
             <h2>${year}</h2>
@@ -375,10 +389,10 @@ function createYearSectionHTML(year, publications) {
 function renderPublications(publications) {
     const container = document.getElementById('publications-container');
     if (!container) return;
-    
+
     // Group by year while preserving CSV order within each year
     const byYear = {};
-    
+
     publications.forEach(pub => {
         const year = pub.year || 'Unknown';
         if (!byYear[year]) {
@@ -386,14 +400,22 @@ function renderPublications(publications) {
         }
         byYear[year].push(pub);
     });
-    
+
     // Sort years descending (newest first)
     const sortedYears = Object.keys(byYear).sort((a, b) => parseInt(b) - parseInt(a));
-    
-    // Build HTML (publications within each year stay in CSV order)
+
+    // Assign numbers: 1 = oldest, N = newest
+    // Walk in display order (years descending) and count down from total
+    let num = publications.length;
+    sortedYears.forEach(year => {
+        byYear[year].forEach(pub => { pub._number = num--; });
+    });
+
+    // Build HTML (years descending, publications within each year stay in CSV order)
     let html = '';
     sortedYears.forEach(year => {
-        html += createYearSectionHTML(year, byYear[year]);
+        const numberedPubs = byYear[year].map(pub => ({pub, number: pub._number}));
+        html += createYearSectionHTML(year, numberedPubs);
     });
     
     container.innerHTML = html;
