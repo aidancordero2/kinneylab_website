@@ -48,11 +48,6 @@ document.addEventListener('DOMContentLoaded', () => {
         loadPublications();
     }
     
-    // Load alumni if on team page
-    if (document.getElementById('alumni-container')) {
-        loadAlumni();
-    }
-    
     // Load person if on person page
     if (document.getElementById('person-container')) {
         loadPerson();
