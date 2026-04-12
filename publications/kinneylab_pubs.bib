@@ -1,0 +1,1086 @@
+@article{martígómez2026inference-c04, 
+  year     = {2026}, 
+  title    = {Inference and visualization of complex genotype-phenotype maps}, 
+  author   = {Martí-Gómez, Carlos and Zhou, Juannan and Chen, Wei-Chia and Stoltzfus, Arlin and Kinney, Justin B and {McCandlish}, David M}, 
+  journal  = {Molecular Biology and Evolution}, 
+  issn     = {0737-4038}, 
+  doi      = {10.1093/molbev/msag023}, 
+  pmid     = {41631708}, 
+  abstract = {Understanding how biological sequences give rise to observable traits, that is, how genotype maps to phenotype, is a central goal in biology. Yet our knowledge of genotype-phenotype maps in natural systems remains limited by the high dimensionality of sequence space and the context-dependent effects of mutations. The emergence of Multiplex assays of variant effect ({MAVEs}) and the availability of ever growing collections of natural sequences offer new opportunities to characterize these maps at an unprecedented scale. However, tools for statistical and exploratory analyses of such high-dimensional data are still needed. To address this gap, we developed gpmap-tools (https://github.com/cmarti/gpmap-tools), a python library integrating models for inference, phenotypic imputation, and error estimation from {MAVE} data or natural sequences in the presence of genetic interactions of any order. gpmap-tools also provides methods for summarizing patterns of epistasis across sites and visualization of genotype-phenotype maps with millions of genotypes. We demonstrate its utility by inferring genotype-phenotype maps containing 262,144 variants of the Shine-Dalgarno sequence, a key motif for {mRNA} translation in bacteria, from both genomic 5'{UTR} sequences and {MAVE} data. Visualization of the inferred landscapes consistently revealed high-fitness ridges that link core motifs at different distances from the start codon, motivating a new, highly interpretable thermodynamic model for this system. In summary, gpmap-tools provides a flexible, interpretable framework for studying complex genotype-phenotype maps, offering new insights into the architecture of genetic interactions and their evolutionary consequences.}, 
+  pages    = {msag023}
+}
+
+@article{kinney2026mount-70e, 
+  year     = {2026}, 
+  title    = {Mount Fuji’s stubby peak: the genotypic density of additive landscapes near maximal fitness}, 
+  author   = {Kinney, Justin B}, 
+  doi      = {10.64898/2026.04.02.716185}, 
+  abstract = {Abstract Additive fitness landscapes—also called Mount Fuji landscapes—are the simplest and most widely used models of sequence-function relationships. As such, they play essential roles across multiple areas of biology, including evolutionary theory, quantitative genetics, gene regulation, and protein science. One of the most basic properties of any fitness landscape is its genotypic density —the number of sequences near a given fitness value. Understanding this density is especially important near fitness peaks, as it quantifies the supply of high-fitness genotypes. Here I study the genotypic density of additive landscapes near fitness peaks. Although this density is well known to be approximately Gaussian near the middle of the fitness range, its behavior near maximal fitness has not been reported. I begin by deriving a saddle-point approximation that accurately describes the genotypic density of additive landscapes over virtually the entire fitness range. I then show that the log density follows a power law near maximal fitness, with an exponent determined by how much the best allele at each position outperforms its nearest competitor. This power-law behavior holds over a substantial fraction of fitness values, besting the Gaussian approximation on both simulated and empirical landscapes across roughly a quarter to a third of the fitness range. Under certain conditions this behavior also extends to globally epistatic landscapes (defined as nonlinear functions over one or more additive traits), though with a reduced range of validity. These findings advance our understanding of one of the most fundamental models of sequence-function relationships. In particular, they reveal that the uppermost reaches of Mount Fuji landscapes, rather than being sharply peaked, are actually quite stubby.}
+}
+
+@article{MartiGomez2025aa, 
+  year     = {2025}, 
+  title    = {Inference and visualization of complex genotype-phenotype maps with gpmap-tools}, 
+  author   = {Martí-Gómez, Carlos and Zhou, Juannan and Chen, Wei-Chia and Kinney, Justin B. and {McCandlish}, David M.}, 
+  journal  = {{bioRxiv}}, 
+  doi      = {10.1101/2025.03.09.642267}, 
+  abstract = {Multiplex assays of variant effect ({MAVEs}) allow the functional characterization of an unprecedented number of sequence variants in both gene regulatory regions and protein coding sequences. This has enabled the study of nearly complete combinatorial libraries of mutational variants and revealed the widespread influence of higher-order genetic interactions that arise when multiple mutations are combined. However, the lack of appropriate tools for exploratory analysis of this high-dimensional data limits our overall understanding of the main qualitative properties of complex genotype-phenotype maps. To fill this gap, we have developed gpmap-tools (https://github.com/cmarti/gpmap-tools), a python library that integrates Gaussian process models for inference, phenotypic imputation, and error estimation from incomplete and noisy {MAVE} data and collections of natural sequences, together with methods for summarizing patterns of higher-order epistasis and non-linear dimensionality reduction techniques that allow visualization of genotype-phenotype maps containing up to millions of genotypes. Here, we used gpmap-tools to study the genotype-phenotype map of the Shine-Dalgarno sequence, a motif that modulates binding of the 16S {rRNA} to the 5’ untranslated region ({UTR}) of {mRNAs} through base pair complementarity during translation initiation in prokaryotes. We inferred full combinatorial landscapes containing 262,144 different sequences from the sequences of 5,311 5’{UTRs} in the E. coli genome and from experimental {MAVE} data. Visualizations of the inferred landscapes were largely consistent with each other, and unveiled a simple molecular mechanism underlying the highly epistatic genotype-phenotype map of the Shine-Dalgarno sequence.}, 
+  pages    = {2025.03.09.642267}
+}
+
+@article{Posfai2025aa, 
+  year     = {2025}, 
+  title    = {Gauge fixing for sequence-function relationships}, 
+  author   = {Posfai, Anna and Zhou, Juannan and {McCandlish}, David M. and Kinney, Justin B.}, 
+  journal  = {{PLOS} Computational Biology}, 
+  issn     = {1553-734X}, 
+  doi      = {10.1371/journal.pcbi.1012818}, 
+  pmid     = {40111986}, 
+  pmcid    = {{PMC}11957564}, 
+  abstract = {Quantitative models of sequence-function relationships are ubiquitous in computational biology, e.g., for modeling the {DNA} binding of transcription factors or the fitness landscapes of proteins. Interpreting these models, however, is complicated by the fact that the values of model parameters can often be changed without affecting model predictions. Before the values of model parameters can be meaningfully interpreted, one must remove these degrees of freedom (called “gauge freedoms” in physics) by imposing additional constraints (a process called “fixing the gauge”). However, strategies for fixing the gauge of sequence-function relationships have received little attention. Here we derive an analytically tractable family of gauges for a large class of sequence-function relationships. These gauges are derived in the context of models with all-order interactions, but an important subset of these gauges can be applied to diverse types of models, including additive models, pairwise-interaction models, and models with higher-order interactions. Many commonly used gauges are special cases of gauges within this family. We demonstrate the utility of this family of gauges by showing how different choices of gauge can be used both to explore complex activity landscapes and to reveal simplified models that are approximately correct within localized regions of sequence space. The results provide practical gauge-fixing strategies and demonstrate the utility of gauge-fixing for model exploration and interpretation.}, 
+  pages    = {e1012818}, 
+  number   = {3}, 
+  volume   = {21}
+}
+
+@article{Posfai2025bb, 
+  year     = {2025}, 
+  title    = {Symmetry, gauge freedoms, and the interpretability of sequence-function relationships}, 
+  author   = {Posfai, Anna and {McCandlish}, David M. and Kinney, Justin B.}, 
+  journal  = {Physical Review Research}, 
+  doi      = {10.1103/physrevresearch.7.023005}, 
+  abstract = {Quantitative models that describe how biological sequences encode functional activities are ubiquitous in modern biology. One important aspect of these models is that they commonly exhibit gauge freedoms, i.e., directions in parameter space that do not affect model predictions. In physics, gauge freedoms arise when physical theories are formulated in ways that respect fundamental symmetries. However, the connections that gauge freedoms in models of sequence-function relationships have to the symmetries of sequence space have yet to be systematically studied. In this work we study the gauge freedoms of models that respect a specific symmetry of sequence space: the group of position-specific character permutations. We find that gauge freedoms arise when model parameters transform under redundant irreducible matrix representations of this group. Based on this finding, we describe an “embedding distillation” procedure that enables both analytic calculation of the number of independent gauge freedoms and efficient computation of a sparse basis for the space of gauge freedoms. We also study how parameter transformation behavior affects parameter interpretability. We find that in many (and possibly all) nontrivial models, the ability to interpret individual model parameters as quantifying intrinsic allelic effects requires that gauge freedoms be present. This finding establishes an incompatibility between two distinct notions of parameter interpretability. Our work thus advances the understanding of symmetries, gauge freedoms, and parameter interpretability in models of sequence-function relationships.}, 
+  pages    = {023005}, 
+  number   = {2}, 
+  volume   = {7}
+}
+
+@article{Petti2025aa, 
+  year     = {2025}, 
+  title    = {On learning functions over biological sequence space: relating Gaussian process priors, regularization, and gauge fixing}, 
+  author   = {Petti, Samantha and Martí-Gómez, Carlos and Kinney, Justin B and Zhou, Juannan and {McCandlish}, David M}, 
+  journal  = {{arXiv}}, 
+  doi      = {10.48550/arxiv.2504.19034}, 
+  eprint   = {2504.19034}, 
+  abstract = {Mappings from biological sequences ({DNA}, {RNA}, protein) to quantitative measures of sequence functionality play an important role in contemporary biology. We are interested in the related tasks of (i) inferring predictive sequence-to-function maps and (ii) decomposing sequence-function maps to elucidate the contributions of individual subsequences. Because each sequence-function map can be written as a weighted sum over subsequences in multiple ways, meaningfully interpreting these weights requires "gauge-fixing," i.e., defining a unique representation for each map. Recent work has established that most existing gauge-fixed representations arise as the unique solutions to \$L_2\$-regularized regression in an overparameterized "weight space" where the choice of regularizer defines the gauge. Here, we establish the relationship between regularized regression in overparameterized weight space and Gaussian process approaches that operate in "function space," i.e. the space of all real-valued functions on a finite set of sequences. We disentangle how weight space regularizers both impose an implicit prior on the learned function and restrict the optimal weights to a particular gauge. We also show how to construct regularizers that correspond to arbitrary explicit Gaussian process priors combined with a wide variety of gauges. Next, we derive the distribution of gauge-fixed weights implied by the Gaussian process posterior and demonstrate that even for long sequences this distribution can be efficiently computed for product-kernel priors using a kernel trick. Finally, we characterize the implicit function space priors associated with the most common weight space regularizers. Overall, our framework unifies and extends our ability to infer and interpret sequence-function relationships.}
+}
+
+@article{rousseau2025algebraic-edc, 
+  year     = {2025}, 
+  title    = {Algebraic and Diagrammatic Methods for the Rule-Based Modeling of Multiparticle Complexes}, 
+  author   = {Rousseau, Rebecca J. and Kinney, Justin B.}, 
+  journal  = {{PRX} Life}, 
+  doi      = {10.1103/prxlife.3.023004}, 
+  abstract = {The formation, dissolution, and dynamics of multiparticle complexes is of fundamental interest in the study of stochastic chemical systems. In 1976, Masao Doi introduced a Fock space formalism for modeling classical particles. Doi’s formalism, however, does not support the assembly of multiple particles into complexes. Starting in the 2000s, multiple groups developed rule-based methods for computationally simulating biochemical systems involving large macromolecular complexes. However, these methods are based on graph-rewriting rules and/or process algebras that are mathematically disconnected from the statistical physics methods generally used to
+analyze equilibrium and nonequilibrium systems. Here we bridge these two approaches by introducing an operator algebra for the rule-based modeling of multiparticle complexes. Our formalism is based on a Fock space that supports not only the creation and annihilation of classical particles but also the assembly of multiple particles into complexes, as well as the disassembly of complexes into their components. Rules are specified by algebraic operators that act on particles through a manifestation of Wick’s theorem. We further describe diagrammatic methods that facilitate rule specification and analytic calculations. We demonstrate our formalism on systems in and out of thermal equilibrium, and for nonequilibrium systems we present a stochastic simulation algorithm based on this formalism. The results provide a unified approach to the mathematical and computational study of stochastic chemical systems in which multiparticle complexes play an important role.}, 
+  note     = {Wrote.}, 
+  month    = {5}
+}
+
+@article{crnjar2025pioneer-e6b, 
+  year    = {2025}, 
+  title   = {{PIONEER}: A virtual platform for iterative improvement of genomic deep learning}, 
+  author  = {Crnjar, Alessandro and Desmarais, John J. and Kinney, Justin B. and Koo, Peter}, 
+  journal = {{ICLR} ({MLGenX} 2025)}, 
+  note    = {Read on 25.05.07 
+I'm sorry I didn't read this more closely before it was submitted and published. Or read it at all! I don't like this paper. I found the results rather hard to follow. And I'm very skeptical about the central claimi about "distribution shifts". My suspicion is that as long as the training set sequences are sufficiently diverse and have fixed activity distributions, it's going to be hard to find the specific training set sequences making much of a difference. This work doesn't test that possibility. As a result it's hard for me to come to any real conclusions. 
+
+Maybe I need to read more closely, but I'm frustrated by it being so hard to parse the results. }
+}
+
+@article{steinberg2025henmt1-f97, 
+  year     = {2025}, 
+  title    = {{HENMT}1 restricts endogenous retrovirus activity by methylation of 3’-{tRNA} fragments}, 
+  author   = {Steinberg, Josh I and Sertznig, Helene and Desmarais, John J. and Wilken, Jenna and Rubio, Daisy and Peacey, Matthew and Kinney, Justin B and Schorn, Andrea J}, 
+  journal  = {{bioRxiv}}, 
+  doi      = {10.1101/2025.05.12.650695}, 
+  pmid     = {40463248}, 
+  pmcid    = {{PMC}12132306}, 
+  abstract = {Long terminal repeat ({LTR}) retroelements such as endogenous retroviruses ({ERVs}) utilize host {tRNA} as a primer for reverse transcription, and are thus susceptible to silencing by small {RNAs} derived from the 3′-end of mature {tRNAs} (3′-{tRFs}). Rigorous quantification reveals that {tRNA} level are not directly proportional to 3’-{tRFs} but specific isoacceptor and isodecoder sequences are highly enriched in a pattern conserved between mouse and human. We found 3’-{tRFs} are 2’-O methylated by the small {RNA} methyltransferase {HENMT}1 protecting them from degradation and promoting {ERV} silencing. In the absence of {HENMT}1, 3’-{tRFs} are subjected to non-templated tailing by the terminal nucleotidyltransferases {TUT}4 and {TENT}2 that regulate small {RNA} turnover. Due to the perfect sequence complementarity of 3’-{tRFs} to endogenous retroviral sequences, they have thousands of targets in mammalian genomes. We conducted a massively parallel reporter assay using Mus musculus particle type D, a highly active murine {ERV}, to determine target site rules for 3’-{tRFs}. Our results suggest that {HENMT}1 not only stabilizes germline integrity but also serves transposon control by 3’-{tRFs} in the soma.}, 
+  pages    = {2025.05.12.650695}
+}
+
+@article{seitz2025uncovering-53a, 
+  year     = {2025}, 
+  title    = {Uncovering the Mechanistic Landscape of Regulatory {DNA} with Deep Learning}, 
+  author   = {Seitz, Evan E. and {McCandlish}, David M. and Kinney, Justin B. and Koo, Peter K}, 
+  journal  = {{bioRxiv}}, 
+  doi      = {10.1101/2025.10.07.681052}, 
+  abstract = {The regulatory genome encodes the logic that governs gene expression, enabling cells to respond to developmental, environmental, and evolutionary cues. This logic arises from complex cis-regulatory mechanisms that integrate transcription factor motifs, their syntactical arrangement, and surrounding sequence context, features that remain challenging to decode. Here, we present {SEAM} (Systematic Explanation of Attribution-based Mechanisms), a computational framework that combines deep learning with explainable {AI} to map the mechanistic impact of genetic mutations. Applied to human and Drosophila regulatory loci, {SEAM} uncovers functional binding sites at sequences of interest and identifies which mutations preserve, disrupt, or create novel binding sites. {SEAM} also reveals that two qualitatively distinct classes of regulatory signal are operative at many loci: signals that are robust to mutation and signals that are readily reprogrammable. These results clarify the inherent ability of regulatory {DNA} to evolve. They also position {SEAM} as a versatile framework for interpreting non-coding variants and for informing the mechanism-aware design of synthetic sequences.}, 
+  pages    = {2025.10.07.681052}
+}
+
+@article{alpsoy2025structural-6d6, 
+  year     = {2025}, 
+  title    = {Structural basis of {DNA}-dependent coactivator recruitment by the tuft cell master regulator {POU}2F3}, 
+  author   = {Alpsoy, Aktan and Ipsaro, Jonathan J. and Skopelitis, Damianos and Pal, Sujay and Chung, Frank S. and Carpenter, Shannon and Desmarais, John J. and Wu, Xiaoli S. and Chang, Kenneth and {DiMare}, Matthew T. and Harten, Erin and Bergman, Staci and Kinney, Justin B. and Engelman, Jeffrey A. and Bhang, Hyo-Eun C. and Joshua-Tor, Leemor and Vakoc, Christopher R.}, 
+  journal  = {Cell Reports}, 
+  issn     = {2211-1247}, 
+  doi      = {10.1016/j.celrep.2025.116572}, 
+  pmid     = {41260223}, 
+  abstract = {The transcription factor {POU}2F3 defines the identity of tuft cells and underlies a distinct molecular subtype of small cell lung cancer ({SCLC}). Although {POU}2F3 is considered undruggable, its activity critically depends on the coactivators {OCA}-T1 and {OCA}-T2. Here, we demonstrate that acute suppression of either {POU}2F3 or {OCA}-T1 induces regression of tuft cell-like {SCLC} xenografts in vivo. To explore the structural basis and druggability of this dependency, we determine crystal structures of {POU}2F3 bound to {OCA}-T1 or {OCA}-T2 in complex with {DNA}, revealing a tripartite, {DNA}-dependent interface. We further employ deep mutational scanning to assess the functional impact of 4,218 missense variants in {POU}2F3 and {OCA}-T1, uncovering both mutation-sensitive hotspots and structurally constrained regions critical for tumor cell fitness. These findings define a transcriptional complex that integrates {DNA} recognition with coactivator recruitment and nominate {POU}2F3-{OCA}-T as a structurally tractable vulnerability in tuft cell-like carcinomas.}, 
+  pages    = {116572}, 
+  number   = {11}, 
+  volume   = {44}
+}
+
+@article{martígómez2025gaugefixer-2f6, 
+  year     = {2025}, 
+  title    = {{GaugeFixer}: overcoming parameter non-identifiability in models of sequence-function relationships}, 
+  author   = {Martí-Gómez, Carlos and {McCandlish}, David M. and Kinney, Justin B.}, 
+  journal  = {{bioRxiv}}, 
+  doi      = {10.64898/2025.12.08.693054}, 
+  pmid     = {41427346}, 
+  pmcid    = {{PMC}12713665}, 
+  abstract = {Mathematical models that describe sequence-function relationships are widely used in computational biology. A key challenge when interpreting these models is that their parameters are not uniquely determined: many different parameter choices can encode the same sequence-function landscape. These ambiguities, known as “gauge freedoms,” must be resolved before parameter values can be meaningfully interpreted. Resolving gauge freedoms requires imposing mathematical constraints on parameters that remove these degrees of freedom, a procedure called “fixing the gauge.” We recently developed mathematical methods for fixing the gauge of a large class of commonly used models, but the direct computational implementation of these methods is often impractical due to the need for projection matrices whose memory requirements scale quadratically with the number of parameters. Here we introduce {GaugeFixer}, a Python package that exploits the specific mathematical structure of gauge-fixing projections to achieve linear scaling, thus enabling application to models with millions of parameters. As one application, we analyzed the local structure of peaks in an empirical fitness landscape for translation initiation. {GaugeFixer} reveals striking similarities, but also fine-scaled variation, in ribosome binding preferences at different positions relative to the start codon, thereby aiding the interpretation of an otherwise unwieldy fitness landscape. {GaugeFixer} thus fills an unmet need in the computational tools available for biologically interpreting sequence-function relationships. {GaugeFixer} is compatible with Python ≥ 3.10 and can be installed using the pip package. Documentation is provided at http://gaugefixer.readthedocs.io. Source code is available at http://github.com/jbkinney/gaugefixer, as are the scripts used to carry out the analyses presented here.}, 
+  pages    = {2025.12.08.693054}
+}
+
+@article{Ishigami2024aa, 
+  year     = {2024}, 
+  title    = {Specificity, synergy, and mechanisms of splice-modifying drugs}, 
+  author   = {Ishigami, Yuma and Wong, Mandy S. and Martí-Gómez, Carlos and Ayaz, Andalus and Kooshkbaghi, Mahdi and Hanson, Sonya M. and {McCandlish}, David M. and Krainer, Adrian R. and Kinney, Justin B.}, 
+  journal  = {Nature Communications}, 
+  doi      = {10.1038/s41467-024-46090-5}, 
+  pmid     = {38424098}, 
+  pmcid    = {{PMC}10904865}, 
+  abstract = {Drugs that target pre-{mRNA} splicing hold great therapeutic potential, but the quantitative understanding of how these drugs work is limited. Here we introduce mechanistically interpretable quantitative models for the sequence-specific and concentration-dependent behavior of splice-modifying drugs. Using massively parallel splicing assays, {RNA}-seq experiments, and precision dose-response curves, we obtain quantitative models for two small-molecule drugs, risdiplam and branaplam, developed for treating spinal muscular atrophy. The results quantitatively characterize the specificities of risdiplam and branaplam for 5’ splice site sequences, suggest that branaplam recognizes 5’ splice sites via two distinct interaction modes, and contradict the prevailing two-site hypothesis for risdiplam activity at {SMN}2 exon 7. The results also show that anomalous single-drug cooperativity, as well as multi-drug synergy, are widespread among small-molecule drugs and antisense-oligonucleotide drugs that promote exon inclusion. Our quantitative models thus clarify the mechanisms of existing treatments and provide a basis for the rational development of new therapies. Two small-molecule drugs, risdiplam and branaplam, have been developed for treating spinal muscular atrophy. Here the authors develop quantitative modeling methods for the sequence-specific and concentration-dependent effects of these and other splice-modifying drugs.}, 
+  pages    = {1880}, 
+  number   = {1}, 
+  volume   = {15}
+}
+
+@article{seitz2024interpreting-f5d, 
+  year     = {2024}, 
+  title    = {Interpreting cis-regulatory mechanisms from genomic deep neural networks using surrogate models}, 
+  author   = {Seitz, Evan E. and {McCandlish}, David M. and Kinney, Justin B. and Koo, Peter K.}, 
+  journal  = {Nature Machine Intelligence}, 
+  doi      = {10.1038/s42256-024-00851-5}, 
+  abstract = {Deep neural networks ({DNNs}) have greatly advanced the ability to predict genome function from sequence. However, elucidating underlying biological mechanisms from genomic {DNNs} remains challenging. Existing interpretability methods, such as attribution maps, have their origins in non-biological machine learning applications and therefore have the potential to be improved by incorporating domain-specific interpretation strategies. Here we introduce {SQUID} (Surrogate Quantitative Interpretability for Deepnets), a genomic {DNN} interpretability framework based on domain-specific surrogate modelling. {SQUID} approximates genomic {DNNs} in user-specified regions of sequence space using surrogate models—simpler quantitative models that have inherently interpretable mathematical forms. {SQUID} leverages domain knowledge to model cis-regulatory mechanisms in genomic {DNNs}, in particular by removing the confounding effects that nonlinearities and heteroscedastic noise in functional genomics data can have on model interpretation. Benchmarking analysis on multiple genomic {DNNs} shows that {SQUID}, when compared to established interpretability methods, identifies motifs that are more consistent across genomic loci and yields improved single-nucleotide variant-effect predictions. {SQUID} also supports surrogate models that quantify epistatic interactions within and between cis-regulatory elements, as well as global explanations of cis-regulatory mechanisms across sequence contexts. {SQUID} thus advances the ability to mechanistically interpret genomic {DNNs}. The intersection of genomics and deep learning shows promise for real impact on healthcare and biological research, but the lack of interpretability in terms of biological mechanisms is limiting utility and further development. As a potential solution, Koo et al. present {SQUID}, an interpretability framework built using domain-specific genomic surrogate models.}, 
+  pages    = {701--713}, 
+  number   = {6}, 
+  volume   = {6}
+}
+
+@article{rousseau2024algebraic-a7c, 
+  year     = {2024}, 
+  title    = {Algebraic and diagrammatic methods for the rule-based modeling of multi-particle complexes}, 
+  author   = {Rousseau, Rebecca J and Kinney, Justin B}, 
+  journal  = {{arXiv}}, 
+  doi      = {10.48550/arxiv.2409.01529}, 
+  eprint   = {2409.01529}, 
+  abstract = {The formation, dissolution, and dynamics of multi-particle complexes is of fundamental interest in the study of stochastic chemical systems. In 1976, Masao Doi introduced a Fock space formalism for modeling classical particles. Doi's formalism, however, does not support the assembly of multiple particles into complexes. Starting in the 2000's, multiple groups developed rule-based methods for computationally simulating biochemical systems involving large macromolecular complexes. However, these methods are based on graph-rewriting rules and/or process algebras that are mathematically disconnected from the statistical physics methods generally used to analyze equilibrium and nonequilibrium systems. Here we bridge these two approaches by introducing an operator algebra for the rule-based modeling of multi-particle complexes. Our formalism is based on a Fock space that supports not only the creation and annihilation of classical particles, but also the assembly of multiple particles into complexes, as well as the disassembly of complexes into their components. Rules are specified by algebraic operators that act on particles through a manifestation of Wick's theorem. We further describe diagrammatic methods that facilitate rule specification and analytic calculations. We demonstrate our formalism on systems in and out of thermal equilibrium, and for nonequilibrium systems we present a stochastic simulation algorithm based on our formalism. The results provide a unified approach to the mathematical and computational study of stochastic chemical systems in which multi-particle complexes play an important role.}
+}
+
+@article{popescu2023gainoffunction-20a, 
+  year    = {2023}, 
+  author  = {Popescu, Saskia and Lim, Yong-Bee and Rasmussen, Angela}, 
+  title   = {Gain-of-function research is about much more than dangerous pathogens}, 
+  journal = {{STAT}}, 
+  url     = {https://www.statnews.com/2023/07/21/gain-of-function-research-debate-covid-regulation/}, 
+  note    = {Read on 23.08.08 
+I wrote a commentary on this for Biosafety Now. It's available at https://biosafetynow.org/justin-kinney-response-to-gain-of-function-research-is-about-much-more-than-dangerous-pathogens-by-popescu-et-al-21-july-2023-stat/
+
+The commentary by Popescu et al. expresses concern that gain-of-function research has gotten a bad rap. The commentary first notes that gain-of-function research describes a wide array of genetic methods, including the use of fluorescent proteins in basic research, the creation of mouse models for studying disease, and the creation of new crops able to feed a growing human population. The commentary then insinuates that concerns about gain-of-function research that have been voiced by scientists, the press, policy makers, and the public threaten to halt progress in all of these areas and more. The commentary ends by arguing that current concerns over gain-of-function research should be countered through increased efforts to promote scientific literacy, as well as change the public perception about what biosafety and biosecurity means. 
+
+The commentary by Popescu et al. is misleading and condescending. In discussions of risky pathogen research, there is indeed a mismatch between the terminology used in the popular press (“gain-of-function”) and the terminology used in science and science policy (“gain-of-function research of concern”, or {GOFROC}). But rather than clarify this distinction, Popescu et al. frame {GOFROC} as being inseparable from a much broader array of safe and important genetic techniques. In this way, the commentary weaponizes an otherwise benign mismatch in vocabulary in order to persuade readers that the regulation of risky research on dangerous pathogens is too complex and nuanced for anyone but experts (like them) to weigh in on. Popescu et al. also minimize legitimate concerns about risky pathogen research, attributing these concerns to disinformation campaigns or scientific illiteracy.
+
+The public is concerned about risky pathogen research for a very simple reason: risky pathogen research might have caused the {COVID}-19 pandemic, and could at any time cause a new pandemic. The public has every right to insist that substantial new restrictions be put on pathogen research to ensure that their lives are never again endangered by overly ambitious scientists. If experts in pathogen biology, public health, biosafety, and biosecurity want to help, they can do so by formulating new regulations and policies that ensure public safety while still facilitating critical research. But until these expert communities acknowledge the inherent right of the public to weigh in on risky pathogen research, and until they acknowledge the unsettling possibility that {COVID}-19 might have arisen from precisely this kind of research, the public’s trust in these experts will continue to suffer, and the ability of these experts to help shape future safety standards will continue to diminish. 
+}, 
+  month   = {7}
+}
+
+@article{kinney2023circadianlike-894, 
+  year     = {2023}, 
+  title    = {A circadian-like gene network programs the timing and dosage of heterochronic {miRNA} transcription during C. elegans development}, 
+  author   = {Kinney, Brian and Sahu, Shubham and Stec, Natalia and Hills-Muckey, Kelly and Adams, Dexter W. and Wang, Jing and Jaremko, Matt and Joshua-Tor, Leemor and Keil, Wolfgang and Hammell, Christopher M.}, 
+  journal  = {Developmental Cell}, 
+  issn     = {1534-5807}, 
+  doi      = {10.1016/j.devcel.2023.08.006}, 
+  pmid     = {37643611}, 
+  pmcid    = {{PMC}10840721}, 
+  abstract = {Development relies on the exquisite control of both the timing and the levels of gene expression to achieve robust developmental transitions. How cis- and trans-acting factors control both aspects simultaneously is unclear. We show that transcriptional pulses of the temporal patterning {microRNA} ({miRNA}) lin-4 are generated by two nuclear hormone receptors ({NHRs}) in C. elegans, {NHR}-85 and {NHR}-23, whose mammalian orthologs, Rev-Erb and {ROR}, function in the circadian clock. Although Rev-Erb and {ROR} antagonize each other to control once-daily transcription in mammals, {NHR}-85/{NHR}-23 heterodimers bind cooperatively to lin-4 regulatory elements to induce a single pulse of expression during each larval stage. Each pulse’s timing, amplitude, and duration are dictated by the phased expression of these {NHRs} and the C. elegans Period ortholog, {LIN}-42, that binds to and represses {NHR}-85. Therefore, during nematode temporal patterning, an evolutionary rewiring of circadian clock components couples the timing of gene expression to the control of transcriptional dosage.}, 
+  pages    = {2563--2579.e8}, 
+  number   = {22}, 
+  volume   = {58}
+}
+
+@article{Tareen2022dh, 
+  year     = {2022}, 
+  title    = {{MAVE}-{NN}: learning genotype-phenotype maps from multiplex assays of variant effect}, 
+  author   = {Tareen, Ammar and Kooshkbaghi, Mahdi and Posfai, Anna and Ireland, William T. and {McCandlish}, David M. and Kinney, Justin B.}, 
+  journal  = {Genome Biology}, 
+  issn     = {1474-7596}, 
+  doi      = {10.1186/s13059-022-02661-7}, 
+  pmid     = {35428271}, 
+  pmcid    = {{PMC}9011994}, 
+  abstract = {Multiplex assays of variant effect ({MAVEs}) are a family of methods that includes deep mutational scanning experiments on proteins and massively parallel reporter assays on gene regulatory sequences. Despite their increasing popularity, a general strategy for inferring quantitative models of genotype-phenotype maps from {MAVE} data is lacking. Here we introduce {MAVE}-{NN}, a neural-network-based Python package that implements a broadly applicable information-theoretic framework for learning genotype-phenotype maps—including biophysically interpretable models—from {MAVE} datasets. We demonstrate {MAVE}-{NN} in multiple biological contexts, and highlight the ability of our approach to deconvolve mutational effects from otherwise confounding experimental nonlinearities and noise.}, 
+  pages    = {98}, 
+  number   = {1}, 
+  volume   = {23}
+}
+
+@article{pukhrambam2022structural-f5b, 
+  year     = {2022}, 
+  title    = {Structural and mechanistic basis of σ-dependent transcriptional pausing}, 
+  author   = {Pukhrambam, Chirangini and Molodtsov, Vadim and Kooshkbaghi, Mahdi and Tareen, Ammar and Vu, Hoa and Skalenko, Kyle S. and Su, Min and Yin, Zhou and Winkelman, Jared T. and Kinney, Justin B. and Ebright, Richard H. and Nickels, Bryce E.}, 
+  journal  = {Proceedings of the National Academy of Sciences}, 
+  issn     = {0027-8424}, 
+  doi      = {10.1073/pnas.2201301119}, 
+  pmid     = {35653571}, 
+  pmcid    = {{PMC}9191641}, 
+  abstract = {In σ-dependent transcriptional pausing, the transcription initiation factor σ, translocating with {RNA} polymerase ({RNAP}), makes sequence-specific protein–{DNA} interactions with a promoter-like sequence element in the transcribed region, inducing pausing. It has been proposed that, in σ-dependent pausing, the {RNAP} active center can access off-pathway “backtracked” states that are substrates for the transcript-cleavage factors of the Gre family and on-pathway “scrunched” states that mediate pause escape. Here, using site-specific protein–{DNA} photocrosslinking to define positions of the {RNAP} trailing and leading edges and of σ relative to {DNA} at the λ{PR}′ promoter, we show directly that σ-dependent pausing in the absence of {GreB} in vitro predominantly involves a state backtracked by 2–4 bp, and σ-dependent pausing in the presence of {GreB} in vitro and in vivo predominantly involves a state scrunched by 2–3 bp. Analogous experiments with a library of 47 (∼16,000) transcribed-region sequences show that the state scrunched by 2–3 bp—and only that state—is associated with the consensus sequence, T−3N−2Y−1G+1, (where −1 corresponds to the position of the {RNA} 3′ end), which is identical to the consensus for pausing in initial transcription and which is related to the consensus for pausing in transcription elongation. Experiments with heteroduplex templates show that sequence information at position T−3 resides in the {DNA} nontemplate strand. A cryoelectron microscopy structure of a complex engaged in σ-dependent pausing reveals positions of {DNA} scrunching on the {DNA} nontemplate and template strands and suggests that position T−3 of the consensus sequence exerts its effects by facilitating scrunching.}, 
+  pages    = {e2201301119}, 
+  number   = {23}, 
+  volume   = {119}, 
+  note     = {Read on 22.05.23 
+Second collaborative work with Bryce. They used {XACT}-seq on mutated versions of the pause site in lambda {PR}' to show that sigma-dependent pausing is modulated by sequence features very similar to pausing in initial transcription, and that like pausing in initiation transcription, it shows scrunching. But scrunching is only observed in the presence of {GRE} factors. 
+
+Provides evidence for the following model of sigma-dependent pausing:
+1. During elongation, {RNAP} anchors upstream of the active site via a sigma R2-{ntDNA} interaction.
+2. Transcription continues for {\textasciitilde} 2-3 nt via scrunching.
+3. With substantial probability, the scrunched {DNA} springs back out, leading to a backtracked {TEC}.
+4. The {TEC} stays in this backtracked state until Gre stimulates the cleavage of bacterial {RNA}.
+5. The scrunching cycle begins anew until, instead of release by backtracking, the sigma R2-{DNA} interaction is broken and the {TEC} continues in elongation. 
+}
+}
+
+@article{Zhou2022aa, 
+  year     = {2022}, 
+  title    = {Higher-order epistasis and phenotypic prediction}, 
+  author   = {Zhou, Juannan and Wong, Mandy S. and Chen, Wei-Chia and Krainer, Adrian R. and Kinney, Justin B. and {McCandlish}, David M.}, 
+  journal  = {Proceedings of the National Academy of Sciences}, 
+  issn     = {0027-8424}, 
+  doi      = {10.1073/pnas.2204233119}, 
+  pmid     = {36129941}, 
+  pmcid    = {{PMC}9522415}, 
+  abstract = {Contemporary high-throughput mutagenesis experiments are providing an increasingly detailed view of the complex patterns of genetic interaction that occur between multiple mutations within a single protein or regulatory element. By simultaneously measuring the effects of thousands of combinations of mutations, these experiments have revealed that the genotype–phenotype relationship typically reflects not only genetic interactions between pairs of sites but also higher-order interactions among larger numbers of sites. However, modeling and understanding these higher-order interactions remains challenging. Here we present a method for reconstructing sequence-to-function mappings from partially observed data that can accommodate all orders of genetic interaction. The main idea is to make predictions for unobserved genotypes that match the type and extent of epistasis found in the observed data. This information on the type and extent of epistasis can be extracted by considering how phenotypic correlations change as a function of mutational distance, which is equivalent to estimating the fraction of phenotypic variance due to each order of genetic interaction (additive, pairwise, three-way, etc.). Using these estimated variance components, we then define an empirical Bayes prior that in expectation matches the observed pattern of epistasis and reconstruct the genotype–phenotype mapping by conducting Gaussian process regression under this prior. To demonstrate the power of this approach, we present an application to the antibody-binding domain {GB}1 and also provide a detailed exploration of a dataset consisting of high-throughput measurements for the splicing efficiency of human pre-{mRNA} 5′ splice sites, for which we also validate our model predictions via additional low-throughput experiments.}, 
+  pages    = {e2204233119}, 
+  number   = {39}, 
+  volume   = {119}, 
+  note     = {Wrote (co-authored)}
+}
+
+@article{Skalenko2021aa, 
+  year     = {2021}, 
+  title    = {Promoter-sequence determinants and structural basis of primer-dependent transcription initiation in Escherichia coli}, 
+  author   = {Skalenko, Kyle S. and Li, Lingting and Zhang, Yuanchao and Vvedenskaya, Irina O. and Winkelman, Jared T. and Cope, Alexander L. and Taylor, Deanne M. and Shah, Premal and Ebright, Richard H. and Kinney, Justin B. and Zhang, Yu and Nickels, Bryce E.}, 
+  journal  = {Proceedings of the National Academy of Sciences}, 
+  issn     = {0027-8424}, 
+  doi      = {10.1073/pnas.2106388118}, 
+  pmid     = {34187896}, 
+  pmcid    = {{PMC}8271711}, 
+  abstract = {Chemical modifications of {RNA} 5′-ends enable “epitranscriptomic” regulation, influencing multiple aspects of {RNA} fate. In transcription initiation, a large inventory of substrates compete with nucleoside triphosphates for use as initiating entities, providing an ab initio mechanism for altering the {RNA} 5′-end. In Escherichia coli cells, {RNAs} with a 5′-end hydroxyl are generated by use of dinucleotide {RNAs} as primers for transcription initiation, “primer-dependent initiation.” Here, we use massively systematic transcript end readout ({MASTER}) to detect and quantify {RNA} 5′-ends generated by primer-dependent initiation for ∼410 (∼1,000,000) promoter sequences in E. coli. The results show primer-dependent initiation in E. coli involves any of the 16 possible dinucleotide primers and depends on promoter sequences in, upstream, and downstream of the primer binding site. The results yield a consensus sequence for primer-dependent initiation, {YTSS}−2NTSS−1NTSSWTSS+1, where {TSS} is the transcription start site, {NTSS}−1NTSS is the primer binding site, Y is pyrimidine, and W is A or T. Biochemical and structure-determination studies show that the base pair (nontemplate-strand base:template-strand base) immediately upstream of the primer binding site (Y:{RTSS}−2, where R is purine) exerts its effect through the base on the {DNA} template strand ({RTSS}−2) through interchain base stacking with the {RNA} primer. Results from analysis of a large set of natural, chromosomally encoded E. coli promoters support the conclusions from {MASTER}. Our findings provide a mechanistic and structural description of how {TSS}-region sequence hard-codes not only the {TSS} position but also the potential for epitranscriptomic regulation through primer-dependent transcription initiation.}, 
+  pages    = {e2106388118}, 
+  number   = {27}, 
+  volume   = {118}, 
+  note     = {Read on 22.05.03 
+First collaborative work with Bryce. My main role was helping define the sequence-dependence of nano-{RNA} priming, esp. via the logos in Figs 3, 6, and in the supplement. But a key contribution was figuring out how to correct for different efficiencies in the enzymatic treatments; this was essential to enable the number of 5'-{OH} transcripts to be estimated via subtraction. But {THAT} was only possible because Bryce \& co did the {PNK}+Rpp combination treatment, and it wasn't obvious otherwise that this made sense to do. Lesson for the future. 
+
+Note: Bryce says the {\textasciitilde} 20\% 0 nt shift component in the mixture modeling (Fig. S1A) is probably due to priming with a 2 nt primer to {TSS} and {TSS}+1, and that this is more favorable, than {NTP} binding to {TSS}+1 because two base pair interactions then form instead of just one. }, 
+  month    = {6}
+}
+
+@article{chen2021fieldtheoretic-8d0, 
+  year     = {2021}, 
+  title    = {Field-theoretic density estimation for biological sequence space with applications to 5′ splice site diversity and aneuploidy in cancer}, 
+  author   = {Chen, Wei-Chia and Zhou, Juannan and Sheltzer, Jason M. and Kinney, Justin B. and {McCandlish}, David M.}, 
+  journal  = {Proceedings of the National Academy of Sciences}, 
+  issn     = {0027-8424}, 
+  doi      = {10.1073/pnas.2025782118}, 
+  pmid     = {34599093}, 
+  pmcid    = {{PMC}8501885}, 
+  abstract = {Density estimation in sequence space is a fundamental problem in machine learning that is also of great importance in computational biology. Due to the discrete nature and large dimensionality of sequence space, how best to estimate such probability distributions from a sample of observed sequences remains unclear. One common strategy for addressing this problem is to estimate the probability distribution using maximum entropy (i.e., calculating point estimates for some set of correlations based on the observed sequences and predicting the probability distribution that is as uniform as possible while still matching these point estimates). Building on recent advances in Bayesian field-theoretic density estimation, we present a generalization of this maximum entropy approach that provides greater expressivity in regions of sequence space where data are plentiful while still maintaining a conservative maximum entropy character in regions of sequence space where data are sparse or absent. In particular, we define a family of priors for probability distributions over sequence space with a single hyperparameter that controls the expected magnitude of higher-order correlations. This family of priors then results in a corresponding one-dimensional family of maximum a posteriori estimates that interpolate smoothly between the maximum entropy estimate and the observed sample frequencies. To demonstrate the power of this method, we use it to explore the high-dimensional geometry of the distribution of 5′ splice sites found in the human genome and to understand patterns of chromosomal abnormalities across human cancers.}, 
+  pages    = {e2025782118}, 
+  number   = {40}, 
+  volume   = {118}, 
+  note     = {Co-authored}, 
+  month    = {10}
+}
+
+@article{chen2021fieldtheoretic-43a, 
+  year     = {2021}, 
+  title    = {Field-theoretic density estimation for biological sequence space with applications to 5′ splice site diversity and aneuploidy in cancer}, 
+  author   = {Chen, Wei-Chia and Zhou, Juannan and Sheltzer, Jason M. and Kinney, Justin B. and {McCandlish}, David M.}, 
+  journal  = {Proceedings of the National Academy of Sciences}, 
+  issn     = {0027-8424}, 
+  doi      = {10.1073/pnas.2025782118}, 
+  pmid     = {34599093}, 
+  pmcid    = {{PMC}8501885}, 
+  abstract = {Density estimation in sequence space is a fundamental problem in machine learning that is also of great importance in computational biology. Due to the discrete nature and large dimensionality of sequence space, how best to estimate such probability distributions from a sample of observed sequences remains unclear. One common strategy for addressing this problem is to estimate the probability distribution using maximum entropy (i.e., calculating point estimates for some set of correlations based on the observed sequences and predicting the probability distribution that is as uniform as possible while still matching these point estimates). Building on recent advances in Bayesian field-theoretic density estimation, we present a generalization of this maximum entropy approach that provides greater expressivity in regions of sequence space where data are plentiful while still maintaining a conservative maximum entropy character in regions of sequence space where data are sparse or absent. In particular, we define a family of priors for probability distributions over sequence space with a single hyperparameter that controls the expected magnitude of higher-order correlations. This family of priors then results in a corresponding one-dimensional family of maximum a posteriori estimates that interpolate smoothly between the maximum entropy estimate and the observed sample frequencies. To demonstrate the power of this method, we use it to explore the high-dimensional geometry of the distribution of 5′ splice sites found in the human genome and to understand patterns of chromosomal abnormalities across human cancers.}, 
+  pages    = {e2025782118}, 
+  number   = {40}, 
+  volume   = {118}
+}
+
+@article{Ireland2020aa, 
+  year     = {2020}, 
+  title    = {Deciphering the regulatory genome of Escherichia coli, one hundred promoters at a time}, 
+  author   = {Ireland, William T and Beeler, Suzannah M and Flores-Bautista, Emanuel and {McCarty}, Nicholas S and Röschinger, Tom and Belliveau, Nathan M and Sweredoski, Michael J and Moradian, Annie and Kinney, Justin B and Phillips, Rob}, 
+  journal  = {{eLife}}, 
+  doi      = {10.7554/elife.55308}, 
+  pmid     = {32955440}, 
+  pmcid    = {{PMC}7567609}, 
+  abstract = {Advances in {DNA} sequencing have revolutionized our ability to read genomes. However, even in the most well-studied of organisms, the bacterium Escherichia coli, for ≈ 65\% of promoters we remain ignorant of their regulation. Until we crack this regulatory Rosetta Stone, efforts to read and write genomes will remain haphazard. We introduce a new method, Reg-Seq, that links massively-parallel reporter assays with mass spectrometry to produce a base pair resolution dissection of more than 100 E. coli promoters in 12 growth conditions. We demonstrate that the method recapitulates known regulatory information. Then, we examine regulatory architectures for more than 80 promoters which previously had no known regulatory information. In many cases, we also identify which transcription factors mediate their regulation. This method clears a path for highly multiplexed investigations of the regulatory genome of model organisms, with the potential of moving to an array of microbes of ecological and medical relevance.}, 
+  pages    = {e55308}, 
+  volume   = {9}, 
+  note     = {Read on 20.12.19; co-authored. 
+Did {RNA}-seq {MPRA} on 113 E. coli promoters in 12 growth conditions. Promoters were synthesized by Twist, {\textasciitilde} 2000 variants per promoter, {\textasciitilde} 10\% mutation rate in 160 bp region about a putative {TSS}. They cloned variants with a downstream 20 bp barcode into {pJK}14 (from Kinney 2010), so all the reporters should be sortable as well. 
+
+The dataset is pretty remarkable. Got {\textasciitilde} 1000 information footprints. Used a semi-automated method to identify putative binding sites, fit energy matrices to these, then determined cognate {TFs} using either mass spec pull-down or {TOMTOM}. Fig. 4 shows inferred regulatory architectures for all of the promoters.
+
+{TF} energy matrices were inferred using the {MI} maximization procedure in {MPAthic} (cited). For some of these, they also inferred the absolute energy scale by first inferring the energy matrix then using a parallel tempering {MCMC} algorithm to infer affine transformations and other nonlinearities. Appendix 3 Table 5 shows the simple promoters for which they were able to infer a scaling factor. 
+
+Note that the information footprints are computed in a strange way. First, they reduce sequences to binary (wt base or mutant base), then they have to do linear model fitting to deal with the fact that the Twist library exhibits correlated mutations. Suggests fitting a big matrix model might be more informative than information footprints. 
+}, 
+  month    = {9}
+}
+
+@article{Hu2020aa, 
+  year     = {2020}, 
+  title    = {Evolution of {DNA} replication origin specification and gene silencing mechanisms}, 
+  author   = {Hu, Y. and Tareen, A. and Sheu, Y-J. and Ireland, W. T. and Speck, C. and Li, H. and Joshua-Tor, L. and Kinney, J. B. and Stillman, B.}, 
+  journal  = {Nature Communications}, 
+  doi      = {10.1038/s41467-020-18964-x}, 
+  pmid     = {33056978}, 
+  pmcid    = {{PMC}7560902}, 
+  abstract = {{DNA} replication in eukaryotic cells initiates from replication origins that bind the Origin Recognition Complex ({ORC}). Origin establishment requires well-defined {DNA} sequence motifs in Saccharomyces cerevisiae and some other budding yeasts, but most eukaryotes lack sequence-specific origins. A 3.9 Å structure of S. cerevisiae {ORC}-Cdc6-Cdt1-Mcm2-7 ({OCCM}) bound to origin {DNA} revealed that a loop within Orc2 inserts into a {DNA} minor groove and an α-helix within Orc4 inserts into a {DNA} major groove. Using a massively parallel origin selection assay coupled with a custom mutual-information-based modeling approach, and a separate analysis of whole-genome replication profiling, here we show that the Orc4 α-helix contributes to the {DNA} sequence-specificity of origins in S. cerevisiae and Orc4 α-helix mutations change genome-wide origin firing patterns. The {DNA} sequence specificity of replication origins, mediated by the Orc4 α-helix, has co-evolved with the gain of {ORC}-Sir4-mediated gene silencing and the loss of {RNA} interference. Contrary to most eukaryotes that lack sequence-specific origins of replication, S. cerevisiae origins are defined by specific {DNA} sequence motifs. Here the authors reveal that multiple subunits of {ORC}, including Orc2 and Orc4, contribute to the sequence-specificity of origins in S. cerevisiae.}, 
+  pages    = {5175}, 
+  number   = {1}, 
+  volume   = {11}
+}
+
+@article{Adams2019id, 
+  year     = {2019}, 
+  rating   = {0}, 
+  title    = {Epistasis in a Fitness Landscape Defined by Antibody-Antigen Binding Free Energy}, 
+  author   = {Adams, Rhys M. and Kinney, Justin B. and Walczak, Aleksandra M. and Mora, Thierry}, 
+  journal  = {Cell Systems}, 
+  issn     = {2405-4712}, 
+  doi      = {10.1016/j.cels.2018.12.004}, 
+  pmid     = {30611676}, 
+  eprint   = {1712.04000}, 
+  abstract = {Epistasis is the phenomenon by which the effect of a mutation depends on its genetic background. While it is usually defined in terms of organismal fitness, for single proteins, it must reflect physical interactions among residues. Here, we systematically extract the specific contribution pairwise epistasis makes to the physical affinity of antibody-antigen binding relevant to affinity maturation, a process of accelerated Darwinian evolution. We find that, among competing definitions of affinity, the binding free energy is the most appropriate to describe epistasis. We show that epistasis is pervasive, accounting for 25\%–35\% of variability, of which a large fraction is beneficial. This work suggests that epistasis both constrains, through negative epistasis, and enlarges, through positive epistasis, the set of possible evolutionary paths that can produce high-affinity sequences during repeated rounds of mutation and selection.}, 
+  pages    = {86--93.e3}, 
+  number   = {1}, 
+  volume   = {8}, 
+  language = {English}, 
+  note     = {Wrote (coauthored)}, 
+  month    = {01}
+}
+
+@article{Barnes2019hxa, 
+  year     = {2019}, 
+  rating   = {0}, 
+  title    = {Mapping {DNA} sequence to transcription factor binding energy in vivo}, 
+  author   = {Barnes, Stephanie L. and Belliveau, Nathan M. and Ireland, William T. and Kinney, Justin B. and Phillips, Rob}, 
+  journal  = {{PLOS} Computational Biology}, 
+  issn     = {1553-734X}, 
+  doi      = {10.1371/journal.pcbi.1006226}, 
+  pmid     = {30716072}, 
+  abstract = {Despite the central importance of transcriptional regulation in biology, it has proven difficult to determine the regulatory mechanisms of individual genes, let alone entire gene networks. It is particularly difficult to decipher the biophysical mechanisms of transcriptional regulation in living cells and determine the energetic properties of binding sites for transcription factors and {RNA} polymerase. In this work, we present a strategy for dissecting transcriptional regulatory sequences using in vivo methods (massively parallel reporter assays) to formulate quantitative models that map a transcription factor binding site’s {DNA} sequence to transcription factor-{DNA} binding energy. We use these models to predict the binding energies of transcription factor binding sites to within 1 {kBT} of their measured values. We further explore how such a sequence-energy mapping relates to the mechanisms of trancriptional regulation in various promoter contexts. Specifically, we show that our models can be used to design specific induction responses, analyze the effects of amino acid mutations on {DNA} sequence preference, and determine how regulatory context affects a transcription factor’s sequence specificity.}, 
+  pages    = {e1006226}, 
+  number   = {2}, 
+  volume   = {15}, 
+  language = {English}, 
+  note     = {Wrote (coauthored)}
+}
+
+@article{Kinney2019jc, 
+  year     = {2019}, 
+  rating   = {0}, 
+  title    = {Massively parallel assays and quantitative sequence-function relationships}, 
+  author   = {Kinney, Justin B and {McCandlish}, David M}, 
+  journal  = {Annual Review of Genomics and Human Genetics}, 
+  issn     = {1527-8204}, 
+  doi      = {10.1146/annurev-genom-083118-014845}, 
+  pmid     = {31091417}, 
+  abstract = {Over the last decade, a rich variety of massively parallel assays have revolutionized our understanding of how biological sequences encode quantitative molecular phenotypes. These assays include deep mutational scanning, high-throughput {SELEX}, and massively parallel reporter assays. Here, we review these experimental methods and how the data they produce can be used to quantitatively model sequence–function relationships. In doing so, we touch on a diverse range of topics, including the identification of clinically relevant genomic variants, the modeling of transcription factor binding to {DNA}, the functional and evolutionary landscapes of proteins, and cis-regulatory mechanisms in both transcription and {mRNA} splicing. We further describe a unified conceptual framework and a core set of mathematical modeling strategies that studies in these diverse areas can make use of. Finally, we highlight key aspects of experimental design and mathematical modeling that are important for the results of such studies to be interpretable and reproducible.}, 
+  pages    = {99--127}, 
+  number   = {1}, 
+  volume   = {20}, 
+  language = {English}, 
+  note     = {Wrote}, 
+  month    = {08}
+}
+
+@article{angenentmari2019deep-9c2, 
+  year     = {2019}, 
+  keywords = {deep learning, {MPA}, Sort-Seq}, 
+  title    = {Deep Learning for {RNA} Synthetic Biology}, 
+  author   = {Angenent-Mari, Nicolaas and Garruss, Alexander and Soenksen, Luis Ruben and Church, George and Collins, James}, 
+  journal  = {{bioRxiv}}, 
+  doi      = {10.1101/872077}, 
+  abstract = {Engineered {RNA} elements are programmable tools capable of detecting small molecules, proteins, and nucleic acids. Predicting the behavior of these tools remains a challenge, a situation that could be addressed through enhanced pattern recognition from deep learning. Thus, we investigate Deep Neural Networks ({DNN}) to predict toehold switch function as a canonical riboswitch model in synthetic biology. To facilitate {DNN} training, we synthesized and characterized in vivo a dataset of 91,534 toehold switches spanning 23 viral genomes and 906 human transcription factors. {DNNs} trained on nucleotide sequences outperformed (R2=0.43-0.70) previous state-of-the-art thermodynamic and kinetic models (R2=0.04-0.15) and allowed for human-understandable attention-visualizations ({VIS}4Map) to identify success and failure modes. This deep learning approach constitutes a major step forward in engineering and understanding of {RNA} synthetic biology.}, 
+  pages    = {872077}, 
+  note     = {Read on 19.12.15 
+The authors use Sort-Seq in E. coli to measure the activities of {\textasciitilde} 244k (though only {\textasciitilde} 100k in pactice) different candidate toehold riboswitches. They then fit an {MLP} {DNN} to these data (one-hot encoded 145 nt sequence as input, either regression or classification as output), and found that this worked better than a bunch of other models, including models based on biochemical features. 
+
+I think the paper's {OK}, but there are a number of issues that should be addressed. In particular, they don't cite me. I'm going to write and send a critique (below).
+------
+Email to Jim collins on 19.12.17:
+
+Hi Jim,
+
+I've just read your preprint,
+
+Angenent-Mari et al. (2019) Deep Learning for {RNA} Synthetic Biology. {bioRxiv} doi: http://dx.doi.org/10.1101/872077
+
+The use of deep neural networks for analyzing the data produced by massively parallel reporter assays is an area of great interest for me, so I figured it made sense to send you my feedback (see below). Please feel free to share these comments with your co-authors. I'm also happy to field additional questions if you like. 
+
+Cheers, 
+-Justin
+
+  Justin B. Kinney
+  Assistant Professor
+  Simons Center for Quantitative Biology
+  Cold Spring Harbor Laboratory
+  jkinney@cshl.edu
+  631-897-5731
+
+I have two primary critiques:
+
+First, there are a number of important references that are missing from your manuscript. The experimental method you describe is a well-established massively parallel reporter assay called "Sort-Seq". This method was introduced by Kinney et al. (2010) and has since been used by many groups to study a wide range of regulatory mechanisms; see Peterman \&amp; Levine (2016) or Kinney \&amp; {McCandlish} (2019) for reviews. In particular, multiple papers dating back to at least Homqvist et al. (2013) and Peterman et al. (2014) have used Sort-Seq to dissect the mechanisms of regulatory {RNA} structures in bacteria. Some of this prior work has even performed explicit comparisons to calculations of {RNA} duplex and hairpin \${\textbackslash} Delta G\$ values, which seem relevant to your results. As currently written, the Introduction and Discussion of your manuscript give the incorrect impression that Sort-Seq method itself is novel. There is a citation to a 2013 paper from the Church lab, but this acknowledgement is only provided in the Methods section and it fails to communicate either the correct origins of Sort-Seq or how well-established this approach is, even within the bacterial regulatory {RNA} and synthetic biology communities (see also Cambry et al., 2018).
+
+Second, I'm concerned about the way that Sort-Seq data is being used to quantify both expression (i.e. {ON} and {OFF} values) and inducibility ({ON}/{OFF}). {ON} and {OFF} values are said to be estimates of mean bin number, affinely transformed so that they fall in the interval [0,1]. This rescaling obscures the true dynamic range (i.e. log fold-change) of your expression measurements, which is important for readers to know. Of more concern to me is the {ON}/{OFF} ratio, which is computed as the difference between these {ON} and {OFF} values. If {ON} and {OFF} values had not been rescaled, then such a difference would indeed provide a measure of the log fold-change. But the rescaling that is used  corrupts this interpretation, producing values that are not monotonically related to log fold-change. This data transformation is likely, I think, to effectively add systematic noise to the data on which you train your models. It also makes it harder for readers to interpret the predictions of the models you infer. 
+
+Finally, I noticed that the middle panel of Fig. 1 appears to be adapted without citation from Fig. 1 of Peterman et al. (2016). 
+
+References:
+
+Cambray, G., Guimaraes, J., Arkin, A. (2018). Evaluation of 244,000 synthetic sequences reveals design principles to optimize translation in Escherichia coli. Nat Biotechnol 157(10), 624 - 1015. https://dx.doi.org/10.1038/nbt.4238
+
+Holmqvist, E., {ReimegŒrd}, J., Wagner, E. (2013). Massive functional mapping of a 5'-{UTR} by saturation mutagenesis, phenotypic sorting and deep sequencing. Nucl Acids Res 41(12), e122. https://dx.doi.org/10.1093/nar/gkt267
+
+Kinney, J., Murugan, A., Callan, C., Cox, E. (2010). Using deep sequencing to characterize the biophysical mechanism of a transcriptional regulatory sequence Proceedings of the National Academy of Sciences 107(20), 9158-9163. https://dx.doi.org/10.1073/pnas.1004290107
+
+Kinney, J., {McCandlish}, D. (2019). Massively Parallel Assays and Quantitative {SequenceÐFunction} Relationships Annual Review of Genomics and Human Genetics 20(1), 99-127. https://dx.doi.org/10.1146/annurev-genom-083118-014845
+
+Peterman, N., Lavi-Itzkovitz, A., Levine, E. (2014). Large-scale mapping of sequence-function relations in small regulatory {RNAs} reveals plasticity and modularity. Nucl Acids Res 42(19), 12177 - 12188. https://dx.doi.org/10.1093/nar/gku863
+
+Peterman, N., Levine, E. (2016). Sort-seq under the hood: implications of design choices on large-scale characterization of sequence-function relations. {BMC} Genomics 17(1), 206. https://dx.doi.org/10.1186/s12864-016-2533-5}
+}
+
+@article{Tareen2019bb, 
+  year     = {2019}, 
+  title    = {Biophysical models of cis-regulation as interpretable neural networks}, 
+  author   = {Tareen, Ammar and Kinney, Justin B}, 
+  journal  = {Proceedings of the 14th conference on Machine Learning in Computational Biology ({MLCB} 2019)}, 
+  doi      = {10.1101/835942}, 
+  url      = {https://mlcb.github.io/mlcb2019_proceedings}, 
+  abstract = {The adoption of deep learning techniques in genomics has been hindered by the difficulty of mechanistically interpreting the models that these techniques produce. In recent years, a variety of post-hoc attribution methods have been proposed for addressing this neural network interpretability problem in the context of gene regulation. Here we describe a complementary way of approaching this problem. Our strategy is based on the observation that two large classes of biophysical models of cis-regulatory mechanisms can be expressed as deep neural networks in which nodes and weights have explicit physiochemical interpretations. We also demonstrate how such biophysical networks can be rapidly inferred, using modern deep learning frameworks, from the data produced by certain types of massively parallel reporter assays ({MPRAs}). These results suggest a scalable strategy for using {MPRAs} to systematically characterize the biophysical basis of gene regulation in a wide range of biological contexts. They also highlight gene regulation as a promising venue for the development of scientifically interpretable approaches to deep learning.}, 
+  pages    = {835942}
+}
+
+@article{Tareen2019aa, 
+  year     = {2019}, 
+  title    = {Logomaker: beautiful sequence logos in Python}, 
+  author   = {Tareen, Ammar and Kinney, Justin B}, 
+  journal  = {Bioinformatics}, 
+  issn     = {1367-4803}, 
+  doi      = {10.1093/bioinformatics/btz921}, 
+  pmid     = {31821414}, 
+  pmcid    = {{PMC}7141850}, 
+  abstract = {Sequence logos are visually compelling ways of illustrating the biological properties of {DNA}, {RNA} and protein sequences, yet it is currently difficult to generate and customize such logos within the Python programming environment. Here we introduce Logomaker, a Python {API} for creating publication-quality sequence logos. Logomaker can produce both standard and highly customized logos from either a matrix-like array of numbers or a multiple-sequence alignment. Logos are rendered as native matplotlib objects that are easy to stylize and incorporate into multi-panel figures. Logomaker can be installed using the pip package manager and is compatible with both Python 2.7 and Python 3.6. Documentation is provided at http://logomaker.readthedocs.io; source code is available at http://github.com/jbkinney/logomaker.}, 
+  pages    = {2272--2274}, 
+  number   = {7}, 
+  volume   = {36}
+}
+
+@patent{Vakoc2018uo, 
+  year   = {2018}, 
+  rating = {0}, 
+  title  = {Methods of identifying essential protein domains}, 
+  author = {Vakoc, Christopher R and Shi, Junwei and Kinney, Justin B}, 
+  url    = {https://patentimages.storage.googleapis.com/8f/7e/db/b78ab14b52d315/US20180023139A1.pdf}, 
+  pages  = {1 -- 33}, 
+  note   = {Wrote (coauthored)}
+}
+
+@article{Belliveau2018kr, 
+  year     = {2018}, 
+  rating   = {0}, 
+  title    = {Systematic approach for dissecting the molecular mechanisms of transcriptional regulation in bacteria}, 
+  author   = {Belliveau, Nathan M. and Barnes, Stephanie L. and Ireland, William T. and Jones, Daniel L. and Sweredoski, Michael J. and Moradian, Annie and Hess, Sonja and Kinney, Justin B. and Phillips, Rob}, 
+  journal  = {Proceedings of the National Academy of Sciences}, 
+  issn     = {0027-8424}, 
+  doi      = {10.1073/pnas.1722055115}, 
+  pmid     = {29728462}, 
+  abstract = {Gene regulation is one of the most ubiquitous processes in biology. However, while the catalog of bacterial genomes continues to expand rapidly, we remain ignorant about how almost all of the genes in these genomes are regulated. At present, characterizing the molecular mechanisms by which individual regulatory sequences operate requires focused efforts using low-throughput methods. Here, we take a first step toward multipromoter dissection and show how a combination of massively parallel reporter assays, mass spectrometry, and information-theoretic modeling can be used to dissect multiple bacterial promoters in a systematic way. We show this approach on both well-studied and previously uncharacterized promoters in the enteric bacterium Escherichia coli. In all cases, we recover nucleotide-resolution models of promoter mechanism. For some promoters, including previously unannotated ones, the approach allowed us to further extract quantitative biophysical models describing input–output relationships. Given the generality of the approach presented here, it opens up the possibility of quantitatively dissecting the mechanisms of promoter function in E. coli and a wide range of other bacteria.}, 
+  pages    = {201722055}, 
+  number   = {21}, 
+  volume   = {115}, 
+  language = {English}, 
+  note     = {Wrote}, 
+  month    = {05}
+}
+
+@article{Wong2018ho, 
+  year     = {2018}, 
+  rating   = {0}, 
+  keywords = {{MPA}, splicing}, 
+  title    = {Quantitative Activity Profile and Context Dependence of All Human 5′ Splice Sites}, 
+  author   = {Wong, Mandy S. and Kinney, Justin B. and Krainer, Adrian R.}, 
+  journal  = {Molecular Cell}, 
+  issn     = {1097-2765}, 
+  doi      = {10.1016/j.molcel.2018.07.033}, 
+  pmid     = {30174293}, 
+  pmcid    = {{PMC}6179149}, 
+  abstract = {Pre-{mRNA} splicing is an essential step in the expression of most human genes. Mutations at the 5′ splice site (5′ss) frequently cause defective splicing and disease due to interference with the initial recognition of the exon-intron boundary by U1 small nuclear ribonucleoprotein ({snRNP}), a component of the spliceosome. Here, we use a massively parallel splicing assay ({MPSA}) in human cells to quantify the activity of all 32,768 unique 5′ss sequences ({NNN}/{GYNNNN}) in three different gene contexts. Our results reveal that although splicing efficiency is mostly governed by the 5′ss sequence, there are substantial differences in this efficiency across gene contexts. Among other uses, these {MPSA} measurements facilitate the prediction of 5′ss sequence variants that are likely to cause aberrant splicing. This approach provides a framework to assess potential pathogenic variants in the human genome and streamline the development of splicing-corrective therapies.}, 
+  pages    = {1012--1026.e3}, 
+  number   = {6}, 
+  volume   = {71}, 
+  language = {English}, 
+  note     = {Wrote}, 
+  month    = {08}
+}
+
+@article{Posfai2018bv, 
+  year     = {2018}, 
+  rating   = {0}, 
+  title    = {Selection for Protein Stability Enriches for Epistatic Interactions.}, 
+  author   = {Posfai, Anna and Zhou, Juannan and Plotkin, Joshua B and Kinney, Justin B and {McCandlish}, David M}, 
+  journal  = {Genes}, 
+  issn     = {2073-4425}, 
+  doi      = {10.3390/genes9090423}, 
+  pmid     = {30134605}, 
+  abstract = {A now classical argument for the marginal thermodynamic stability of proteins explains the distribution of observed protein stabilities as a consequence of an entropic pull in protein sequence space. In particular, most sequences that are sufficiently stable to fold will have stabilities near the folding threshold. Here, we extend this argument to consider its predictions for epistatic interactions for the effects of mutations on the free energy of folding. Although there is abundant evidence to indicate that the effects of mutations on the free energy of folding are nearly additive and conserved over evolutionary time, we show that these observations are compatible with the hypothesis that a non-additive contribution to the folding free energy is essential for observed proteins to maintain their native structure. In particular, through both simulations and analytical results, we show that even very small departures from additivity are sufficient to drive this effect.}, 
+  number   = {9}, 
+  volume   = {9}, 
+  language = {English}, 
+  note     = {Wrote (coauthored)}, 
+  month    = {08}
+}
+
+@article{Jenson2018fb, 
+  year     = {2018}, 
+  rating   = {0}, 
+  title    = {Peptide design by optimization on a data-parameterized protein interaction landscape.}, 
+  author   = {Jenson, Justin M and Xue, Vincent and Stretz, Lindsey and Mandal, Tirtha and Reich, Lothar Luther and Keating, Amy E}, 
+  journal  = {Proceedings of the National Academy of Sciences}, 
+  issn     = {0027-8424}, 
+  doi      = {10.1073/pnas.1812939115}, 
+  pmid     = {30322927}, 
+  abstract = {Many applications in protein engineering require optimizing multiple protein properties simultaneously, such as binding one target but not others or binding a target while maintaining stability. Such multistate design problems require navigating a high-dimensional space to find proteins with desired characteristics. A model that relates protein sequence to functional attributes can guide design to solutions that would be hard to discover via screening. In this work, we measured thousands of protein-peptide binding affinities with the high-throughput interaction assay amped {SORTCERY} and used the data to parameterize a model of the alpha-helical peptide-binding landscape for three members of the Bcl-2 family of proteins: Bcl-{xL}, Mcl-1, and Bfl-1. We applied optimization protocols to explore extremes in this landscape to discover peptides with desired interaction profiles. Computational design generated 36 peptides, all of which bound with high affinity and specificity to just one of Bcl-{xL}, Mcl-1, or Bfl-1, as intended. We designed additional peptides that bound selectively to two out of three of these proteins. The designed peptides were dissimilar to known Bcl-2-binding peptides, and high-resolution crystal structures confirmed that they engaged their targets as expected. Excellent results on this challenging problem demonstrate the power of a landscape modeling approach, and the designed peptides have potential uses as diagnostic tools or cancer therapeutics.}, 
+  pages    = {201812939 -- E10351}, 
+  number   = {44}, 
+  volume   = {592}, 
+  language = {English}, 
+  note     = {Don't remember when I read, but my notes are marked}, 
+  month    = {10}
+}
+
+@article{Forcier2018eu, 
+  year     = {2018}, 
+  rating   = {0}, 
+  title    = {Measuring cis-regulatory energetics in living cells using allelic manifolds.}, 
+  author   = {Forcier, Talitha L and Ayaz, Andalus and Gill, Manraj S and Jones, Daniel and Phillips, Rob and Kinney, Justin B}, 
+  journal  = {{eLife}}, 
+  doi      = {10.7554/elife.40618}, 
+  pmid     = {30570483}, 
+  abstract = {Gene expression in all organisms is controlled by cooperative interactions between {DNA}-bound transcription factors ({TFs}), but quantitatively measuring {TF}-{DNA} and {TF}-{TF} interactions remains difficult. Here we introduce a strategy for precisely measuring the Gibbs free energy of such interactions in living cells. This strategy centers on the measurement and modeling of 'allelic manifolds', a multidimensional generalization of the classical genetics concept of allelic series. Allelic manifolds are measured using reporter assays performed on strategically designed cis-regulatory sequences. Quantitative biophysical models are then fit to the resulting data. We used this strategy to study regulation by two Escherichia coli {TFs}, {CRP} and [Formula: see text] {RNA} polymerase. Doing so, we consistently obtained energetic measurements precise to [Formula: see text] kcal/mol. We also obtained multiple results that deviate from the prior literature. Our strategy is compatible with massively parallel reporter assays in both prokaryotes and eukaryotes, and should therefore be highly scalable and broadly applicable.}, 
+  pages    = {e40618}, 
+  volume   = {7}, 
+  language = {English}, 
+  note     = {Wrote}, 
+  month    = {12}
+}
+
+@article{Chen2018ew, 
+  year     = {2018}, 
+  rating   = {0}, 
+  keywords = {19_gpcourse, density estimation, Gaussian processes}, 
+  title    = {Density estimation on small data sets}, 
+  author   = {Chen, Wei-Chia and Tareen, Ammar and Kinney, Justin B.}, 
+  journal  = {Physical Review Letters}, 
+  issn     = {0031-9007}, 
+  doi      = {10.1103/physrevlett.121.160605}, 
+  pmid     = {30387642}, 
+  eprint   = {1804.01932}, 
+  abstract = {How might a smooth probability distribution be estimated with accurately quantified uncertainty from a limited amount of sampled data? Here we describe a field-theoretic approach that addresses this problem remarkably well in one dimension, providing an exact nonparametric Bayesian posterior without relying on tunable parameters or large-data approximations. Strong non-Gaussian constraints, which require a nonperturbative treatment, are found to play a major role in reducing distribution uncertainty. A software implementation of this method is provided.}, 
+  pages    = {160605}, 
+  number   = {16}, 
+  volume   = {121}, 
+  language = {English}, 
+  note     = {Wrote}, 
+  month    = {10}
+}
+
+@article{Lu2018dna, 
+  year     = {2018}, 
+  rating   = {0}, 
+  title    = {A Transcription Factor Addiction in Leukemia Imposed by the {MLL} Promoter Sequence.}, 
+  author   = {Lu, Bin and Klingbeil, Olaf and Tarumoto, Yusuke and Somerville, Tim D D and Huang, Yu-Han and Wei, Yiliang and Wai, Dorothy C and Low, Jason K K and Milazzo, Joseph P and Wu, Xiaoli S and Cao, Zhendong and Yan, Xiaomei and Demerdash, Osama E and Huang, Gang and Mackay, Joel P and Kinney, Justin B and Shi, Junwei and Vakoc, Christopher R}, 
+  journal  = {Cancer Cell}, 
+  issn     = {1535-6108}, 
+  doi      = {10.1016/j.ccell.2018.10.015}, 
+  pmid     = {30503706}, 
+  abstract = {The Mixed Lineage Leukemia gene ({MLL}) is altered in leukemia by chromosomal translocations to produce oncoproteins composed of the {MLL} N-terminus fused to the C-terminus of a partner protein. Here, we used domain-focused {CRISPR} screening to identify {ZFP}64 as an essential transcription factor in {MLL}-rearranged leukemia. We show that the critical function of {ZFP}64 in leukemia is to maintain {MLL} expression via binding to the {MLL} promoter, which is the most enriched location of {ZFP}64 occupancy in the human genome. The specificity of {ZFP}64 for {MLL} is accounted for by an exceptional density of {ZFP}64 motifs embedded within the {MLL} promoter. These findings demonstrate how a sequence anomaly of an oncogene promoter can impose a transcriptional addiction in cancer.}, 
+  pages    = {970 -- 981.e8}, 
+  number   = {6}, 
+  volume   = {34}, 
+  language = {English}, 
+  note     = {Wrote (coauthored)}, 
+  month    = {12}
+}
+
+@article{belghazi2018mine-ab0, 
+  year     = {2018}, 
+  title    = {{MINE}: Mutual Information Neural Estimation}, 
+  author   = {Belghazi, Mohamed Ishmael and Baratin, Aristide and Rajeswar, Sai and Ozair, Sherjil and Bengio, Yoshua and Courville, Aaron and Hjelm, R Devon}, 
+  journal  = {{arXiv}}, 
+  eprint   = {1801.04062}, 
+  abstract = {We argue that the estimation of mutual information between high dimensional continuous random variables can be achieved by gradient descent over neural networks. We present a Mutual Information Neural Estimator ({MINE}) that is linearly scalable in dimensionality as well as in sample size, trainable through back-prop, and strongly consistent. We present a handful of applications on which {MINE} can be used to minimize or maximize mutual information. We apply {MINE} to improve adversarially trained generative models. We also use {MINE} to implement Information Bottleneck, applying it to supervised classification; our results demonstrate substantial improvement in flexibility and performance in these settings.}, 
+  note     = {Read on 25.05.13 
+This is a cool paper! At it's core, they describe a method, called {MINE}, that uses a variational lower bound on mutual information based on the Donsker-Varadhan dual representation. This dual representation gives mutual information as a suprrermum over functions on the input x output space. This differs from the Agakov and Barber variational lower bound that we used in {MAVE}-{NN}, which is a supremum over conditional densities on output undefined input. {MINE} has the key advantage that it doesn't have to restrict the variational approximators to densities. This enables efficient computational use of a much larger class of approximators. We should investigate using {MINE} to compute variational information in {MAVE}-{NN}2.
+
+Their applications of {MINE} are:
+1. Assessing equitability (as defined by Kinney \& Atwal, 2014!!)
+2. Reducing mode dropping in {GANs} (I understand the problem but not how {MINE} provide a solution)
+3. Improving bidirectional {GANs} (I couldn't follow this, as I don't know how these work)
+4. Information bottleneck calculations. It is here that they discuss advantages over Agakov and Barber.
+
+There is also a "strong consistency" theorem that I skipped because I don't believe these sorts of things are useful. 
+
+Note: The Donsker-Varadhan dual representation is easy to prove and looks *a lot* like the action I've used in my {BFT} papers. It might make sense to read Donsker and Varadhan, 1983, and then compare this to Kinney 2015 and Chen et al., 2018. }
+}
+
+@article{Senturk2017kz, 
+  year     = {2017}, 
+  rating   = {0}, 
+  title    = {Rapid and tunable method to temporally control gene editing based on conditional Cas9 stabilization.}, 
+  author   = {Senturk, Serif and Shirole, Nitin H and Nowak, Dawid G and Corbo, Vincenzo and Pal, Debjani and Vaughan, Alexander and Tuveson, David A and Trotman, Lloyd C and Kinney, Justin B and Sordella, Raffaella}, 
+  journal  = {Nature Communications}, 
+  issn     = {2041-1723}, 
+  doi      = {10.1038/ncomms14370}, 
+  pmid     = {28224990}, 
+  abstract = {The {CRISPR}/Cas9 system is a powerful tool for studying gene function. Here, we describe a method that allows temporal control of {CRISPR}/Cas9 activity based on conditional Cas9 destabilization. We demonstrate that fusing an {FKBP}12-derived destabilizing domain to Cas9 ({DD}-Cas9) enables conditional Cas9 expression and temporal control of gene editing in the presence of an {FKBP}12 synthetic ligand. This system can be easily adapted to co-express, from the same promoter, {DD}-Cas9 with any other gene of interest without co-modulation of the latter. In particular, when co-expressed with inducible Cre-{ER}(T2), our system enables parallel, independent manipulation of alleles targeted by Cas9 and traditional recombinase with single-cell specificity. We anticipate this platform will be used for the systematic characterization and identification of essential genes, as well as the investigation of the interactions between functional genes.}, 
+  pages    = {14370}, 
+  volume   = {8}, 
+  language = {English}, 
+  note     = {Wrote (coauthored)}, 
+  month    = {02}
+}
+
+@article{Ipsaro2017bk, 
+  year     = {2017}, 
+  rating   = {0}, 
+  title    = {Rapid generation of drug-resistance alleles at endogenous loci using {CRISPR}-Cas9 indel mutagenesis.}, 
+  author   = {Ipsaro, Jonathan J and Shen, Chen and Arai, Eri and Xu, Yali and Kinney, Justin B and Joshua-Tor, Leemor and Vakoc, Christopher R and Shi, Junwei}, 
+  journal  = {{PLoS} {ONE}}, 
+  doi      = {10.1371/journal.pone.0172177}, 
+  pmid     = {28231254}, 
+  abstract = {Genetic alterations conferring resistance to the effects of chemical inhibitors are valuable tools for validating on-target effects in cells. Unfortunately, for many therapeutic targets such alleles are not available. To address this issue, we evaluated whether {CRISPR}-Cas9-mediated insertion/deletion (indel) mutagenesis can produce drug-resistance alleles at endogenous loci. This method takes advantage of the heterogeneous in-frame alleles produced following Cas9-mediated {DNA} cleavage, which we show can generate rare alleles that confer resistance to the growth-arrest caused by chemical inhibitors. We used this approach to identify novel resistance alleles of two lysine methyltransferases, {DOT}1L and {EZH}2, which are each essential for the growth of {MLL}-fusion leukemia cells. We biochemically characterized the {DOT}1L mutation, showing that it is significantly more active than the wild-type enzyme. These findings validate the on-target anti-leukemia activities of existing {DOT}1L and {EZH}2 inhibitors and reveal a simple method for deriving drug-resistance alleles for novel targets, which may have utility during early stages of drug development.}, 
+  pages    = {e0172177}, 
+  number   = {2}, 
+  volume   = {12}, 
+  language = {English}, 
+  note     = {Wrote (coauthored)}
+}
+
+@article{Atwal2015dj, 
+  year     = {2016}, 
+  rating   = {0}, 
+  title    = {Learning Quantitative Sequence–Function Relationships from Massively Parallel Experiments}, 
+  author   = {Atwal, Gurinder S. and Kinney, Justin B.}, 
+  journal  = {Journal of Statistical Physics}, 
+  issn     = {0022-4715}, 
+  doi      = {10.1007/s10955-015-1398-3}, 
+  eprint   = {1506.00054}, 
+  abstract = {A fundamental aspect of biological information processing is the ubiquity of sequence–function relationships—functions that map the sequence of {DNA}, {RNA}, or protein to a biochemically relevant activity. Most sequence–function relationships in biology are quantitative, but only recently have experimental techniques for effectively measuring these relationships been developed. The advent of such “massively parallel” experiments presents an exciting opportunity for the concepts and methods of statistical physics to inform the study of biological systems. After reviewing these recent experimental advances, we focus on the problem of how to infer parametric models of sequence–function relationships from the data produced by these experiments. Specifically, we retrace and extend recent theoretical work showing that inference based on mutual information, not the standard likelihood-based approach, is often necessary for accurately learning the parameters of these models. Closely connected with this result is the emergence of “diffeomorphic modes”—directions in parameter space that are far less constrained by data than likelihood-based inference would suggest. Analogous to Goldstone modes in physics, diffeomorphic modes arise from an arbitrarily broken symmetry of the inference problem. An analytically tractable model of a massively parallel experiment is then described, providing an explicit demonstration of these fundamental aspects of statistical inference. This paper concludes with an outlook on the theoretical and computational challenges currently facing studies of quantitative sequence–function relationships.}, 
+  pages    = {1203--1243}, 
+  number   = {5}, 
+  volume   = {162}, 
+  language = {English}, 
+  note     = {Wrote}
+}
+
+@article{Ireland2016cc, 
+  year     = {2016}, 
+  rating   = {0}, 
+  title    = {{MPAthic}: quantitative modeling of sequence-function relationships for massively parallel assays}, 
+  author   = {Ireland, W T and Kinney, Justin B}, 
+  journal  = {{bioRxiv}}, 
+  doi      = {10.1101/054676}, 
+  abstract = {... The copyright holder for this preprint (which was not . http://dx.doi.org/ 10.1101 / 054676 doi: {bioRxiv} preprint first posted online May. 21, 2016; ... The copyright holder for this preprint (which was not . http://dx.doi.org/ 10.1101 / 054676 doi: {bioRxiv} preprint first posted online May. ...}, 
+  volume   = {doi: http://dx.doi.org/10.1101/054676}, 
+  note     = {Wrote}
+}
+
+@article{Morrison2016id, 
+  year     = {2016}, 
+  rating   = {0}, 
+  title    = {Modeling multi-particle complexes in stochastic chemical systems}, 
+  author   = {Morrison, M J and Kinney, Justin B}, 
+  journal  = {{bioRxiv}}, 
+  doi      = {10.1101/045435}, 
+  abstract = {Abstract: Large complexes of classical particles play central roles in biology, in polymer physics, and in other disciplines. However, physics currently lacks mathematical methods for describing such complexes in terms of component particles, interaction energies, and ...}, 
+  volume   = {doi: http://dx.doi.org/10.1101/045435}, 
+  note     = {Wrote}
+}
+
+@article{Sheu2016fw, 
+  year     = {2016}, 
+  rating   = {0}, 
+  title    = {Concerted activities of Mcm4, Sld3, and Dbf4 in control of origin activation and {DNA} replication fork progression}, 
+  author   = {Sheu, Yi-Jun and Kinney, Justin B. and Stillman, Bruce}, 
+  journal  = {Genome Research}, 
+  issn     = {1088-9051}, 
+  doi      = {10.1101/gr.195248.115}, 
+  pmid     = {26733669}, 
+  pmcid    = {{PMC}4772014}, 
+  abstract = {Eukaryotic chromosomes initiate {DNA} synthesis from multiple replication origins in a temporally specific manner during S phase. The replicative helicase Mcm2-7 functions in both initiation and fork progression and thus is an important target of regulation. Mcm4, a helicase subunit, possesses an unstructured regulatory domain that mediates control from multiple kinase signaling pathways, including the Dbf4-dependent Cdc7 kinase ({DDK}). Following replication stress in S phase, Dbf4 and Sld3, an initiation factor and essential target of Cyclin-Dependent Kinase ({CDK}), are targets of the checkpoint kinase Rad53 for inhibition of initiation from origins that have yet to be activated, so-called late origins. Here, whole-genome {DNA} replication profile analysis is used to access under various conditions the effect of mutations that alter the Mcm4 regulatory domain and the Rad53 targets, Sld3 and Dbf4. Late origin firing occurs under genotoxic stress when the controls on Mcm4, Sld3, and Dbf4 are simultaneously eliminated. The regulatory domain of Mcm4 plays an important role in the timing of late origin firing, both in an unperturbed S phase and in {dNTP} limitation. Furthermore, checkpoint control of Sld3 impacts fork progression under replication stress. This effect is parallel to the role of the Mcm4 regulatory domain in monitoring fork progression. Hypomorph mutations in sld3 are suppressed by a mcm4 regulatory domain mutation. Thus, in response to cellular conditions, the functions executed by Sld3, Dbf4, and the regulatory domain of Mcm4 intersect to control origin firing and replication fork progression, thereby ensuring genome stability.}, 
+  pages    = {315--330}, 
+  number   = {3}, 
+  volume   = {26}, 
+  language = {English}, 
+  note     = {Wrote (coauthored)}
+}
+
+@article{Adams2016dka, 
+  year     = {2016}, 
+  rating   = {0}, 
+  title    = {Measuring the sequence-affinity landscape of antibodies with massively parallel titration curves}, 
+  author   = {Adams, Rhys M and Mora, Thierry and Walczak, Aleksandra M and Kinney, Justin B}, 
+  journal  = {{eLife}}, 
+  doi      = {10.7554/elife.23156}, 
+  pmid     = {28035901}, 
+  eprint   = {1601.02160}, 
+  abstract = {Despite the central role that antibodies play in the adaptive immune system and in biotechnology, much remains unknown about the quantitative relationship between an antibody’s amino acid sequence and its antigen binding affinity. Here we describe a new experimental approach, called Tite-Seq, that is capable of measuring binding titration curves and corresponding affinities for thousands of variant antibodies in parallel. The measurement of titration curves eliminates the confounding effects of antibody expression and stability that arise in standard deep mutational scanning assays. We demonstrate Tite-Seq on the {CDR}1H and {CDR}3H regions of a well-studied {scFv} antibody. Our data shed light on the structural basis for antigen binding affinity and suggests a role for secondary {CDR} loops in establishing antibody stability. Tite-Seq fills a large gap in the ability to measure critical aspects of the adaptive immune system, and can be readily used for studying sequence-affinity landscapes in other protein systems. {DOI}: http://dx.doi.org/10.7554/{eLife}.23156.001}, 
+  pages    = {e23156}, 
+  volume   = {5}, 
+  language = {English}, 
+  note     = {Wrote}, 
+  month    = {12}
+}
+
+@article{Shi2015fg, 
+  year     = {2015}, 
+  rating   = {0}, 
+  title    = {Discovery of cancer drug targets by {CRISPR}-Cas9 screening of protein domains}, 
+  author   = {Shi, Junwei and Wang, Eric and Milazzo, Joseph P and Wang, Zihua and Kinney, Justin B and Vakoc, Christopher R}, 
+  journal  = {Nature Biotechnology}, 
+  issn     = {1087-0156}, 
+  doi      = {10.1038/nbt.3235}, 
+  pmid     = {25961408}, 
+  pmcid    = {{PMC}4529991}, 
+  abstract = {Cancer drug targets are identified by {CRISPR}-based screens that knock out functional protein domains. {CRISPR}-Cas9 genome editing technology holds great promise for discovering therapeutic targets in cancer and other diseases. Current screening strategies target {CRISPR}-Cas9–induced mutations to the 5′ exons of candidate genes1,2,3,4,5, but this approach often produces in-frame variants that retain functionality, which can obscure even strong genetic dependencies. Here we overcome this limitation by targeting {CRISPR}-Cas9 mutagenesis to exons encoding functional protein domains. This generates a higher proportion of null mutations and substantially increases the potency of negative selection. We also show that the magnitude of negative selection can be used to infer the functional importance of individual protein domains of interest. A screen of 192 chromatin regulatory domains in murine acute myeloid leukemia cells identifies six known drug targets and 19 additional dependencies. A broader application of this approach may allow comprehensive identification of protein domains that sustain cancer cells and are suitable for drug targeting.}, 
+  pages    = {661--667}, 
+  number   = {6}, 
+  volume   = {33}, 
+  language = {English}, 
+  note     = {Wrote (coauthored)}
+}
+
+@article{Kinney2015vu, 
+  year     = {2015}, 
+  rating   = {0}, 
+  keywords = {19_gpcourse, density estimation, Gaussian processes}, 
+  title    = {Unification of field theory and maximum entropy methods for learning probability densities}, 
+  author   = {Kinney, Justin B.}, 
+  journal  = {Physical Review E}, 
+  issn     = {1539-3755}, 
+  doi      = {10.1103/physreve.92.032107}, 
+  pmid     = {26465426}, 
+  eprint   = {1411.5371}, 
+  abstract = {The need to estimate smooth probability distributions (a.k.a. probability densities) from finite sampled data is ubiquitous in science. Many approaches to this problem have been described, but none is yet regarded as providing a definitive solution. Maximum entropy estimation and Bayesian field theory are two such approaches. Both have origins in statistical physics, but the relationship between them has remained unclear. Here I unify these two methods by showing that every maximum entropy density estimate can be recovered in the infinite smoothness limit of an appropriate Bayesian field theory. I also show that Bayesian field theory estimation can be performed without imposing any boundary conditions on candidate densities, and that the infinite smoothness limit of these theories recovers the most common types of maximum entropy estimates. Bayesian field theory thus provides a natural test of the maximum entropy null hypothesis and, furthermore, returns an alternative (lower entropy) density estimate when the maximum entropy hypothesis is falsified. The computations necessary for this approach can be performed rapidly for one-dimensional data, and software for doing this is provided.}, 
+  pages    = {032107}, 
+  number   = {3}, 
+  volume   = {92}, 
+  language = {English}, 
+  note     = {Wrote}
+}
+
+@article{Wang2015iy, 
+  year     = {2015}, 
+  rating   = {0}, 
+  title    = {The transcriptional cofactor {TRIM}33 prevents apoptosis in B lymphoblastic leukemia by deactivating a single enhancer.}, 
+  author   = {Wang, Eric and Kawaoka, Shinpei and Roe, Jae-Seok and Shi, Junwei and Hohmann, Anja F and Xu, Yali and Bhagwat, Anand S and Suzuki, Yutaka and Kinney, Justin B and Vakoc, Christopher R}, 
+  journal  = {{eLife}}, 
+  doi      = {10.7554/elife.06377}, 
+  pmid     = {25919951}, 
+  pmcid    = {{PMC}4409649}, 
+  abstract = {Most mammalian transcription factors ({TFs}) and cofactors occupy thousands of genomic sites and modulate the expression of large gene networks to implement their biological functions. In this study, we describe an exception to this paradigm. {TRIM}33 is identified here as a lineage dependency in B cell neoplasms and is shown to perform this essential function by associating with a single cis element. {ChIP}-seq analysis of {TRIM}33 in murine B cell leukemia revealed a preferential association with two lineage-specific enhancers that harbor an exceptional density of motifs recognized by the {PU}.1 {TF}. {TRIM}33 is recruited to these elements by {PU}.1, yet acts to antagonize {PU}.1 function. One of the {PU}.1/{TRIM}33 co-occupied enhancers is upstream of the pro-apoptotic gene Bim, and deleting this enhancer renders {TRIM}33 dispensable for leukemia cell survival. These findings reveal an essential role for {TRIM}33 in preventing apoptosis in B lymphoblastic leukemia by interfering with enhancer-mediated Bim activation.}, 
+  pages    = {e06377}, 
+  volume   = {4}, 
+  language = {English}, 
+  note     = {Wrote (coauthored)}, 
+  month    = {04}
+}
+
+@article{Kinney2014el, 
+  year     = {2014}, 
+  rating   = {0}, 
+  keywords = {density estimation, Gaussian processes}, 
+  title    = {Estimation of probability densities using scale-free field theories}, 
+  author   = {Kinney, Justin B.}, 
+  journal  = {Physical Review E}, 
+  issn     = {1539-3755}, 
+  doi      = {10.1103/physreve.90.011301}, 
+  pmid     = {25122244}, 
+  eprint   = {1312.6661}, 
+  abstract = {The question of how best to estimate a continuous probability density from finite data is an intriguing open problem at the interface of statistics and physics. Previous work has argued that this problem can be addressed in a natural way using methods from statistical field theory. Here I describe results that allow this field-theoretic approach to be rapidly and deterministically computed in low dimensions, making it practical for use in day-to-day data analysis. Importantly, this approach does not impose a privileged length scale for smoothness of the inferred probability density, but rather learns a natural length scale from the data due to the tradeoff between goodness of fit and an Occam factor. Open source software implementing this method in one and two dimensions is provided.}, 
+  pages    = {011301}, 
+  number   = {1}, 
+  volume   = {90}, 
+  note     = {Wrote}
+}
+
+@article{Kinney2014bs, 
+  year     = {2014}, 
+  rating   = {0}, 
+  title    = {Reply to Murrell et al.: Noise matters}, 
+  author   = {Kinney, Justin B. and Atwal, Gurinder S.}, 
+  journal  = {Proceedings of the National Academy of Sciences}, 
+  issn     = {0027-8424}, 
+  doi      = {10.1073/pnas.1404661111}, 
+  pmid     = {25035890}, 
+  pmcid    = {{PMC}4040606}, 
+  pages    = {E2161--E2161}, 
+  number   = {21}, 
+  volume   = {111}, 
+  language = {English}, 
+  note     = {Wrote}, 
+  month    = {05}
+}
+
+@article{Kinney2014vn, 
+  year     = {2014}, 
+  rating   = {0}, 
+  title    = {Equitability, mutual information, and the maximal information coefficient}, 
+  author   = {Kinney, Justin B. and Atwal, Gurinder S.}, 
+  journal  = {Proceedings of the National Academy of Sciences}, 
+  issn     = {0027-8424}, 
+  doi      = {10.1073/pnas.1309933111}, 
+  pmid     = {24550517}, 
+  pmcid    = {{PMC}3948249}, 
+  eprint   = {1301.7745}, 
+  abstract = {How should one quantify the strength of association between two random variables without bias for relationships of a specific form? Despite its conceptual simplicity, this notion of statistical “equitability” has yet to receive a definitive mathematical formalization. Here we argue that equitability is properly formalized by a self-consistency condition closely related to Data Processing Inequality. Mutual information, a fundamental quantity in information theory, is shown to satisfy this equitability criterion. These findings are at odds with the recent work of Reshef et al. [Reshef {DN}, et al. (2011) Science 334(6062):1518–1524], which proposed an alternative definition of equitability and introduced a new statistic, the “maximal information coefficient” ({MIC}), said to satisfy equitability in contradistinction to mutual information. These conclusions, however, were supported only with limited simulation evidence, not with mathematical arguments. Upon revisiting these claims, we prove that the mathematical definition of equitability proposed by Reshef et al. cannot be satisfied by any (nontrivial) dependence measure. We also identify artifacts in the reported simulation evidence. When these artifacts are removed, estimates of mutual information are found to be more equitable than estimates of {MIC}. Mutual information is also observed to have consistently higher statistical power than {MIC}. We conclude that estimating mutual information provides a natural (and often practical) way to equitably quantify statistical associations in large datasets.}, 
+  pages    = {3354--3359}, 
+  number   = {9}, 
+  volume   = {111}, 
+  language = {English}, 
+  note     = {Wrote}, 
+  month    = {03}
+}
+
+@article{Kinney2014ge, 
+  year     = {2014}, 
+  rating   = {0}, 
+  title    = {Parametric Inference in the Large Data Limit Using Maximally Informative Models}, 
+  author   = {Kinney, Justin B. and Atwal, Gurinder S.}, 
+  journal  = {Neural computation}, 
+  issn     = {0899-7667}, 
+  doi      = {10.1162/neco_a_00568}, 
+  pmid     = {24479782}, 
+  abstract = {Motivated by data-rich experiments in transcriptional regulation and sensory neuroscience, we consider the following general problem in statistical inference: when exposed to a high-dimensional signal S, a system of interest computes a representation R of that signal, which is then observed through a noisy measurement M. From a large number of signals and measurements, we wish to infer the “filter” that maps S to R. However, the standard method for solving such problems, likelihood-based inference, requires perfect a priori knowledge of the “noise function” mapping R to M. In practice such noise functions are usually known only approximately, if at all, and using an incorrect noise function will typically bias the inferred filter. Here we show that in the large data limit, this need for a precharacterized noise function can be circumvented by searching for filters that instead maximize the mutual information I[M; R] between observed measurements and predicted representations. Moreover, if the correct filter lies within the space of filters being explored, maximizing mutual information becomes equivalent to simultaneously maximizing every dependence measure that satisfies the data processing inequality. It is important to note that maximizing mutual information will typically leave a small number of directions in parameter space unconstrained. We term these directions diffeomorphic modes and present an equation that allows these modes to be derived systematically. The presence of diffeomorphic modes reflects a fundamental and nontrivial substructure within parameter space, one that is obscured by standard likelihood-based inference.}, 
+  pages    = {637--653}, 
+  number   = {4}, 
+  volume   = {26}, 
+  language = {English}, 
+  note     = {Wrote}
+}
+
+@article{RazoMejia2014fo, 
+  year     = {2014}, 
+  rating   = {0}, 
+  title    = {Comparison of the theoretical and real-world evolutionary potential of a genetic circuit}, 
+  author   = {Razo-Mejia, M and Boedicker, J Q and Jones, D and {DeLuna}, A and Kinney, J B and Phillips, R}, 
+  journal  = {Physical Biology}, 
+  issn     = {1478-3975}, 
+  doi      = {10.1088/1478-3975/11/2/026005}, 
+  pmid     = {24685590}, 
+  pmcid    = {{PMC}4051709}, 
+  abstract = {With the development of next-generation sequencing technologies, many large scale experimental efforts aim to map genotypic variability among individuals. This natural variability in populations fuels many fundamental biological processes, ranging from evolutionary adaptation and speciation to the spread of genetic diseases and drug resistance. An interesting and important component of this variability is present within the regulatory regions of genes. As these regions evolve, accumulated mutations lead to modulation of gene expression, which may have consequences for the phenotype. A simple model system where the link between genetic variability, gene regulation and function can be studied in detail is missing. In this article we develop a model to explore how the sequence of the wild-type lac promoter dictates the fold-change in gene expression. The model combines single-base pair resolution maps of transcription factor and {RNA} polymerase binding energies with a comprehensive thermodynamic model of gene regulation. The model was validated by predicting and then measuring the variability of lac operon regulation in a collection of natural isolates. We then implement the model to analyze the sensitivity of the promoter sequence to the regulatory output, and predict the potential for regulation to evolve due to point mutations in the promoter region.}, 
+  pages    = {026005}, 
+  number   = {2}, 
+  volume   = {11}, 
+  language = {English}, 
+  note     = {Wrote (coauthored)}
+}
+
+@article{Sheu2014kc, 
+  year     = {2014}, 
+  rating   = {0}, 
+  title    = {Domain within the helicase subunit Mcm4 integrates multiple kinase signals to control {DNA} replication initiation and fork progression}, 
+  author   = {Sheu, Yi-Jun and Kinney, Justin B. and Lengronne, Armelle and Pasero, Philippe and Stillman, Bruce}, 
+  journal  = {Proceedings of the National Academy of Sciences}, 
+  issn     = {0027-8424}, 
+  doi      = {10.1073/pnas.1404063111}, 
+  pmid     = {24740181}, 
+  pmcid    = {{PMC}4020090}, 
+  abstract = {Eukaryotic {DNA} synthesis initiates from multiple replication origins and progresses through bidirectional replication forks to ensure efficient duplication of the genome. Temporal control of initiation from origins and regulation of replication fork functions are important aspects for maintaining genome stability. Multiple kinase-signaling pathways are involved in these processes. The Dbf4-dependent Cdc7 kinase ({DDK}), cyclin-dependent kinase ({CDK}), and Mec1, the yeast Ataxia telangiectasia mutated/Ataxia telangiectasia mutated Rad3-related checkpoint regulator, all target the structurally disordered N-terminal serine/threonine-rich domain ({NSD}) of mini-chromosome maintenance subunit 4 (Mcm4), a subunit of the mini-chromosome maintenance ({MCM}) replicative helicase complex. Using whole-genome replication profile analysis and single-molecule {DNA} fiber analysis, we show that under replication stress the temporal pattern of origin activation and {DNA} replication fork progression are altered in cells with mutations within two separate segments of the Mcm4 {NSD}. The proximal segment of the {NSD} residing next to the {DDK}-docking domain mediates repression of late-origin firing by checkpoint signals because in its absence late origins become active despite an elevated {DNA} damage-checkpoint response. In contrast, the distal segment of the {NSD} at the N terminus plays no role in the temporal pattern of origin firing but has a strong influence on replication fork progression and on checkpoint signaling. Both fork progression and checkpoint response are regulated by the phosphorylation of the canonical {CDK} sites at the distal {NSD}. Together, our data suggest that the eukaryotic {MCM} helicase contains an intrinsic regulatory domain that integrates multiple signals to coordinate origin activation and replication fork progression under stress conditions.}, 
+  pages    = {E1899--E1908}, 
+  number   = {18}, 
+  volume   = {111}, 
+  language = {English}, 
+  note     = {Wrote (coauthored)}, 
+  month    = {05}
+}
+
+@article{WeingartenGabbay2014hg, 
+  year     = {2014}, 
+  rating   = {0}, 
+  title    = {The grammar of transcriptional regulation.}, 
+  author   = {Weingarten-Gabbay, Shira and Segal, Eran}, 
+  journal  = {Human genetics}, 
+  issn     = {0340-6717}, 
+  doi      = {10.1007/s00439-013-1413-1}, 
+  pmid     = {24390306}, 
+  pmcid    = {{PMC}4024068}, 
+  abstract = {Eukaryotes employ combinatorial strategies to generate a variety of expression patterns from a relatively small set of regulatory {DNA} elements. As in any other language, deciphering the mapping between {DNA} and expression requires an understanding of the set of rules that govern basic principles in transcriptional regulation, the functional elements involved, and the ways in which they combine to orchestrate a transcriptional output. Here, we review the current understanding of various grammatical rules, including the effect on expression of the number of transcription factor binding sites, their location, orientation, affinity and activity; co-association with different factors; and intrinsic nucleosome organization. We review different methods that are used to study the grammar of transcription regulation, highlight gaps in current understanding, and discuss how recent technological advances may be utilized to bridge them.}, 
+  pages    = {701 -- 711}, 
+  number   = {6}, 
+  volume   = {133}, 
+  language = {English}, 
+  note     = {Read on 17.04.13 
+Segal is such a sleezbag. Again minimizes my work in order to promote Sharon et al, 2012. Still, this review (which isn't that good and is full of weezle phrases) will be useful to cite to make the argument that understanding the grammar of the transcriptional regulatory code is a major challenge.}
+}
+
+@article{Kinney2014tj, 
+  year     = {2014}, 
+  rating   = {0}, 
+  title    = {Mutual information: a universal measure of statistical dependence}, 
+  author   = {Kinney, J B}, 
+  journal  = {Biomedical Computation Review}, 
+  abstract = {A deluge of data is transforming science and industry. Many hope that this massive flux of information will reveal new vistas of insight and understanding, but extracting knowledge from Big Data requires appropriate statistical tools. Often, very little can be assumed about the types of patterns lurking in large data sets. In these cases it is important to use statistical methods that do not make strong assumptions about the relationships one hopes to identify and measure. In this tutorial we consider the specific problem of quantifying how strongly …}, 
+  pages    = {33}, 
+  number   = {2}, 
+  volume   = {10}
+}
+
+@article{Melnikov2012dw, 
+  year     = {2012}, 
+  rating   = {0}, 
+  title    = {Systematic dissection and optimization of inducible enhancers in human cells using a massively parallel reporter assay}, 
+  author   = {Melnikov, Alexandre and Murugan, Anand and Zhang, Xiaolan and Tesileanu, Tiberiu and Wang, Li and Rogov, Peter and Feizi, Soheil and Gnirke, Andreas and Callan, Curtis G and Kinney, Justin B and Kellis, Manolis and Lander, Eric S and Mikkelsen, Tarjei S}, 
+  journal  = {Nature Biotechnology}, 
+  issn     = {1087-0156}, 
+  doi      = {10.1038/nbt.2137}, 
+  pmid     = {22371084}, 
+  pmcid    = {{PMC}3297981}, 
+  abstract = {An improved understanding of enhancers in mammalian genomes could facilitate the design of new regulatory elements. Melnikov et al. synthesize thousands of {\textasciitilde} 90 nt enhancer variants, assay their activity in human cells and use the data to rationally optimize synthetic enhancers. Learning to read and write the transcriptional regulatory code is of central importance to progress in genetic analysis and engineering. Here we describe a massively parallel reporter assay ({MPRA}) that facilitates the systematic dissection of transcriptional regulatory elements. In {MPRA}, microarray-synthesized {DNA} regulatory elements and unique sequence tags are cloned into plasmids to generate a library of reporter constructs. These constructs are transfected into cells and tag expression is assayed by high-throughput sequencing. We apply {MPRA} to compare >27,000 variants of two inducible enhancers in human cells: a synthetic {cAMP}-regulated enhancer and the virus-inducible interferon-β enhancer. We first show that the resulting data define accurate maps of functional transcription factor binding sites in both enhancers at single-nucleotide resolution. We then use the data to train quantitative sequence-activity models ({QSAMs}) of the two enhancers. We show that {QSAMs} from two cellular states can be combined to design enhancer variants that optimize potentially conflicting objectives, such as maximizing induced activity while minimizing basal activity.}, 
+  pages    = {271--277}, 
+  number   = {3}, 
+  volume   = {30}, 
+  language = {English}, 
+  note     = {Wrote (coauthored)}, 
+  month    = {02}
+}
+
+@article{Kinney2010tn, 
+  year     = {2010}, 
+  rating   = {0}, 
+  title    = {Using deep sequencing to characterize the biophysical mechanism of a transcriptional regulatory sequence}, 
+  author   = {Kinney, Justin B. and Murugan, Anand and Callan, Curtis G. and Cox, Edward C.}, 
+  journal  = {Proceedings of the National Academy of Sciences}, 
+  issn     = {0027-8424}, 
+  doi      = {10.1073/pnas.1004290107}, 
+  pmid     = {20439748}, 
+  pmcid    = {{PMC}2889059}, 
+  abstract = {Cells use protein-{DNA} and protein-protein interactions to regulate transcription. A biophysical understanding of this process has, however, been limited by the lack of methods for quantitatively characterizing the interactions that occur at specific promoters and enhancers in living cells. Here we show how such biophysical information can be revealed by a simple experiment in which a library of partially mutated regulatory sequences are partitioned according to their in vivo transcriptional activities and then sequenced en masse. Computational analysis of the sequence data produced by this experiment can provide precise quantitative information about how the regulatory proteins at a specific arrangement of binding sites work together to regulate transcription. This ability to reliably extract precise information about regulatory biophysics in the face of experimental noise is made possible by a recently identified relationship between likelihood and mutual information. Applying our experimental and computational techniques to the Escherichia coli lac promoter, we demonstrate the ability to identify regulatory protein binding sites de novo, determine the sequence-dependent binding energy of the proteins that bind these sites, and, importantly, measure the in vivo interaction energy between {RNA} polymerase and a {DNA}-bound transcription factor. Our approach provides a generally applicable method for characterizing the biophysical basis of transcriptional regulation by a specified regulatory sequence. The principles of our method can also be applied to a wide range of other problems in molecular biology.}, 
+  pages    = {9158--9163}, 
+  number   = {20}, 
+  volume   = {107}, 
+  language = {English}, 
+  note     = {Wrote}, 
+  month    = {05}
+}
+
+@phdthesis{Kinney2008ta, 
+  year     = {2008}, 
+  rating   = {0}, 
+  title    = {Biophysical models of transcriptional regulation from sequence data}, 
+  author   = {Kinney, Justin B}, 
+  abstract = {In the post-genomics era, {DNA} sequence itself is becoming a medium by which to probe biological phenomena. With the advent of microarray technology, and ultra- high-throughput sequencing more recently, large sequence data sets are becoming standard products of day-to-day research. Yet as software for analyzing such data proliferates, a fundamental understanding of how {DNA} sequence should be used to gain biological insight is missing from the literature. The focus of this thesis is on developing tools for characterizing the biophysi- cal interactions underlying transcriptional regulation – the ability of cells to control which genes they transcribe to {mRNA}, and thus express as protein. We begin by presenting basic principles for the analysis of {DNA} sequence data – specifically, data for which each sequence σ is accompanied by a (perhaps very noisy) measurement z of biophysical functionality. A salient feature of experiments which produce such σz data is the difficulty of characterizing experimental noise a priori. We overcome this obstacle by introducing error-model-averaged ({EMA}) likelihood, which allows biophysical models of arbitrary functional form to be rigorously fit to σz data. {EMA} likelihood is closely related to mutual information, but its probabilistic interpretation provides some advantages. We demonstrate {EMA} likelihood’s utility on previously published microarray data, using Metropolis Monte Carlo sampling to infer models for the {DNA}-binding energy of transcription factor proteins.
+The ability to properly analyze σz data leads us to propose a new experimen- tal assay, called Sort-Seq. This technique uses ultra-high-throughput sequencing to probe the protein-{DNA} and protein-protein interactions underlying transcriptional regulation at specific genomic loci. We present data from a proof-of-principle Sort- Seq experiment probing the {lacZ} promoter of E. coli, data we use to characterize the sequence-dependent binding energy of the transcription factor {CRP}. We then discuss what one can, in principle, infer from large Sort-Seq data sets. We show that, with enough σz data probing the binding of multiple proteins per sequence, one should be able to infer both protein-{DNA} and protein-protein interaction energies in absolute thermal units. We conclude that, with the advent of ultra-high-throughput sequenc- ing, {DNA} sequence itself might provide a very sensitive means by which to probe in vivo biophysics.}, 
+  note     = {Wrote}
+}
+
+@article{Mustonen2008ds, 
+  year     = {2008}, 
+  rating   = {0}, 
+  title    = {Energy-dependent fitness: A quantitative model for the evolution of yeast transcription factor binding sites}, 
+  author   = {Mustonen, Ville and Kinney, Justin and Callan, Curtis G. and Lässig, Michael}, 
+  journal  = {Proceedings of the National Academy of Sciences}, 
+  issn     = {0027-8424}, 
+  doi      = {10.1073/pnas.0805909105}, 
+  pmid     = {18723669}, 
+  pmcid    = {{PMC}2527919}, 
+  url      = {http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?db=pubmed&cmd=Retrieve&dopt=AbstractPlus&list_uids=18723669}, 
+  abstract = {We present a genomewide cross-species analysis of regulation for broad-acting transcription factors in yeast. Our model for binding site evolution is founded on biophysics: the binding energy between transcription factor and site is a quantitative phenotype of regulatory function, and selection is given by a fitness landscape that depends on this phenotype. The model quantifies conservation, as well as loss and gain, of functional binding sites in a coherent way. Its predictions are supported by direct cross-species comparison between four yeast species. We find ubiquitous compensatory mutations within functional sites, such that the energy phenotype and the function of a site evolve in a significantly more constrained way than does its sequence. We also find evidence for substantial evolution of regulatory function involving point mutations as well as sequence insertions and deletions within binding sites. Genes lose their regulatory link to a given transcription factor at a rate similar to the neutral point mutation rate, from which we infer a moderate average fitness advantage of functional over nonfunctional sites. In a wider context, this study provides an example of inference of selection acting on a quantitative molecular trait.}, 
+  pages    = {12376--12381}, 
+  number   = {34}, 
+  volume   = {105}, 
+  note     = {Wrote (coauthored)}, 
+  month    = {08}
+}
+
+@article{Kinney2007uk, 
+  year     = {2007}, 
+  rating   = {0}, 
+  title    = {An Index for 4 Dimensional Super Conformal Theories}, 
+  author   = {Kinney, Justin B. and Maldacena, Juan and Minwalla, Shiraz and Raju, Suvrat}, 
+  journal  = {Communications in Mathematical Physics}, 
+  issn     = {0010-3616}, 
+  doi      = {10.1007/s00220-007-0258-7}, 
+  eprint   = {hep-th/0510251}, 
+  url      = {http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?db=pubmed&cmd=Retrieve&dopt=AbstractPlus&list_uids=34547839717}, 
+  abstract = {We present a trace formula for an index over the spectrum of four dimensional superconformal field theories on S3 × time. Our index receives contributions from states invariant under at least one supercharge and captures all information – that may be obtained purely from group theory – about protected short representations in 4 dimensional superconformal field theories. In the case of the theory our index is a function of four continuous variables. We compute it at weak coupling using gauge theory and at strong coupling by summing over the spectrum of free massless particles in {AdS}5 × S5 and find perfect agreement at large N and small charges. Our index does not reproduce the entropy of supersymmetric black holes in {AdS}5, but this is not a contradiction, as it differs qualitatively from the partition function over supersymmetric states of the theory. We note that entropy for some small supersymmetric {AdS}5 black holes may be reproduced via a D-brane counting involving giant gravitons. For big black holes we find a qualitative (but not exact) agreement with the naive counting of {BPS} states in the free Yang Mills theory. In this paper we also evaluate and study the partition function over the chiral ring in the Yang Mills theory.}, 
+  pages    = {209--254}, 
+  number   = {1}, 
+  volume   = {275}, 
+  note     = {Wrote (coauthored)}
+}
+
+@article{Kinney2007dh, 
+  year     = {2007}, 
+  rating   = {0}, 
+  title    = {Precise physical models of protein–{DNA} interaction from high-throughput data}, 
+  author   = {Kinney, Justin B. and Tkačik, Gašper and Callan, Curtis G.}, 
+  journal  = {Proceedings of the National Academy of Sciences}, 
+  issn     = {0027-8424}, 
+  doi      = {10.1073/pnas.0609908104}, 
+  pmid     = {17197415}, 
+  pmcid    = {{PMC}1766414}, 
+  abstract = {A cell's ability to regulate gene transcription depends in large part on the energy with which transcription factors ({TFs}) bind their {DNA} regulatory sites. Obtaining accurate models of this binding energy is therefore an important goal for quantitative biology. In this article, we present a principled likelihood-based approach for inferring physical models of {TF}–{DNA} binding energy from the data produced by modern high-throughput binding assays. Central to our analysis is the ability to assess the relative likelihood of different model parameters given experimental observations. We take a unique approach to this problem and show how to compute likelihood without any explicit assumptions about the noise that inevitably corrupts such measurements. Sampling possible choices for model parameters according to this likelihood function, we can then make probabilistic predictions for the identities of binding sites and their physical binding energies. Applying this procedure to previously published data on the Saccharomyces cerevisiae {TF} Abf1p, we find models of {TF} binding whose parameters are determined with remarkable precision. Evidence for the accuracy of these models is provided by an astonishing level of phylogenetic conservation in the predicted energies of putative binding sites. Results from in vivo and in vitro experiments also provide highly consistent characterizations of Abf1p, a result that contrasts with a previous analysis of the same data.}, 
+  pages    = {501--506}, 
+  number   = {2}, 
+  volume   = {104}, 
+  language = {English}, 
+  note     = {Wrote}, 
+  month    = {01}
+}
+
+@article{Hines2004wi, 
+  year     = {2004}, 
+  rating   = {0}, 
+  title    = {Modeling of gravity-wave tail spectra in the middle atmosphere via numerical and Doppler-spread methods}, 
+  author   = {Hines, Colin O and Childress, Lilian I and Kinney, Justin B and Sulzer, Michael P}, 
+  journal  = {Journal of Atmospheric and Solar-Terrestrial Physics}, 
+  issn     = {1364-6826}, 
+  doi      = {10.1016/j.jastp.2004.02.004}, 
+  url      = {http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?db=pubmed&cmd=Retrieve&dopt=AbstractPlus&list_uids=2942563820}, 
+  abstract = {Wind fluctuations in the middle atmosphere exhibit an Eulerian spectral tail approximating to the form m−3 at large vertical wavenumbers m. The tail is taken here to result from a characteristically Eulerian nonlinearity in the governing fluid dynamic equations, a nonlinearity that is absent from a Lagrangian description. It is modeled here via a previously described analytic transformation from assumed model Lagrangian input spectra. The present work gives numerical expression to the earlier analytic results for the intensity of the tail. The resultant tail spectra are found to represent well the relevant data at reasonable values of Richardson number. Under an assumption of constant Richardson number, they exhibit saturation as height increases, as do the observations. Previously obtained approximate results, including those of the Doppler-spread theory of saturation, are found to represent well the new numerical results. Implications for that theory and for the associated Doppler-spread parameterization are discussed in a companion paper.}, 
+  pages    = {933--948}, 
+  number   = {11}, 
+  volume   = {66}, 
+  note     = {Wrote (coauthored)}
+}
+
+@article{Kinney2003dp, 
+  year     = {2003}, 
+  rating   = {0}, 
+  title    = {r-modes in accreting neutron stars with magnetoviscous boundary layers}, 
+  author   = {Kinney, Justin B and Mendell, Gregory}, 
+  journal  = {Physical Review D}, 
+  issn     = {1550-7998}, 
+  doi      = {10.1103/physrevd.67.024032}, 
+  eprint   = {gr-qc/0206001}, 
+  abstract = {We explore the dynamics of the r-modes in accreting neutron stars in two ways. First, we explore how dissipation in the magnetoviscous boundary layer ({MVBL}) at the crust-core interface governs the damping of r-mode perturbations in the fluid interior. Two models are considered: one assuming an ordinary-fluid interior, the other taking the core to consist of superfluid neutrons, type {II} superconducting protons, and normal electrons. We show, within our approximations, that no solution to the magnetohydrodynamic equations exists in the superfluid model when both the neutron and proton vortices are pinned. However, if just one species of vortex is pinned, we can find solutions. When the neutron vortices are pinned and the proton vortices are unpinned there is much more dissipation than in the ordinary-fluid model, unless the pinning is weak. When the proton vortices are pinned and the neutron vortices are unpinned the dissipation is comparable or slightly less than that for the ordinary-fluid model, even when the pinning is strong. We also find in the superfluid model that relatively weak radial magnetic fields ∼109 G(108 K/T)2 greatly affect the {MVBL}, though the effects of mutual friction tend to counteract the magnetic effects. Second, we evolve our two models in time, accounting for accretion, and explore how the magnetic field strength, the r-mode saturation amplitude, and the accretion rate affect the cyclic evolution of these stars. If the r-modes control the spin cycles of accreting neutron stars we find that magnetic fields can affect the clustering of the spin frequencies of low mass x-ray binaries and the fraction of these that are currently emitting gravitational waves.}, 
+  pages    = {024032}, 
+  number   = {2}, 
+  volume   = {67}, 
+  language = {English}, 
+  note     = {Wrote}
+}

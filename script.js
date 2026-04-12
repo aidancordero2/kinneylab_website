@@ -313,6 +313,34 @@ async function loadSelectedPublications() {
 // ===== PUBLICATIONS PAGE DYNAMIC LOADING =====
 
 
+// Format venue string to include DOI
+function formatVenueWithDoi(venue, doi) {
+    if (!doi || !venue) return venue;
+
+    const doiStr = 'doi:' + doi;
+
+    // bioRxiv: replace the preprint number with DOI
+    if (/^bioRxiv/i.test(venue)) {
+        const ym = venue.match(/,\s*(\d{4})\s*$/);
+        return ym ? 'bioRxiv, ' + doiStr + ', ' + ym[1] : 'bioRxiv, ' + doiStr;
+    }
+
+    // arXiv: replace the arXiv identifier with DOI
+    if (/^arXiv/i.test(venue)) {
+        const ym = venue.match(/,\s*(\d{4})\s*$/);
+        return ym ? 'arXiv, ' + doiStr + ', ' + ym[1] : 'arXiv, ' + doiStr;
+    }
+
+    // Regular venue: insert DOI before the trailing year
+    const ym = venue.match(/,\s*(\d{4})\s*$/);
+    if (ym) {
+        return venue.slice(0, venue.lastIndexOf(ym[0])) + ', ' + doiStr + ', ' + ym[1];
+    }
+
+    // No year at end: append DOI
+    return venue + ', ' + doiStr;
+}
+
 // Format authors to highlight Kinney
 function formatAuthors(authorsStr) {
     if (!authorsStr) return '';
@@ -332,7 +360,8 @@ function formatAuthors(authorsStr) {
 function createPublicationHTML(pub, number) {
     const title = pub.title || '';
     const authors = formatAuthors(pub.authors);
-    const venue = pub.venue || '';
+    const doi = (pub.doi || '').trim();
+    const venue = formatVenueWithDoi(pub.venue || '', doi);
 
     // Link: prefer paper URL, fall back to preprint
     const citationUrl = pub.paper || pub.preprint || '';
