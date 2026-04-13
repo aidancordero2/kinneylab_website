@@ -48,11 +48,6 @@ document.addEventListener('DOMContentLoaded', () => {
         loadPublications();
     }
     
-    // Load alumni if on team page
-    if (document.getElementById('alumni-container')) {
-        loadAlumni();
-    }
-    
     // Load person if on person page
     if (document.getElementById('person-container')) {
         loadPerson();
@@ -318,6 +313,34 @@ async function loadSelectedPublications() {
 // ===== PUBLICATIONS PAGE DYNAMIC LOADING =====
 
 
+// Format venue string to include DOI
+function formatVenueWithDoi(venue, doi) {
+    if (!doi || !venue) return venue;
+
+    const doiStr = 'doi:' + doi;
+
+    // bioRxiv: replace the preprint number with DOI
+    if (/^bioRxiv/i.test(venue)) {
+        const ym = venue.match(/,\s*(\d{4})\s*$/);
+        return ym ? 'bioRxiv, ' + doiStr + ', ' + ym[1] : 'bioRxiv, ' + doiStr;
+    }
+
+    // arXiv: replace the arXiv identifier with DOI
+    if (/^arXiv/i.test(venue)) {
+        const ym = venue.match(/,\s*(\d{4})\s*$/);
+        return ym ? 'arXiv, ' + doiStr + ', ' + ym[1] : 'arXiv, ' + doiStr;
+    }
+
+    // Regular venue: insert DOI before the trailing year
+    const ym = venue.match(/,\s*(\d{4})\s*$/);
+    if (ym) {
+        return venue.slice(0, venue.lastIndexOf(ym[0])) + ', ' + doiStr + ', ' + ym[1];
+    }
+
+    // No year at end: append DOI
+    return venue + ', ' + doiStr;
+}
+
 // Format authors to highlight Kinney
 function formatAuthors(authorsStr) {
     if (!authorsStr) return '';
@@ -334,33 +357,63 @@ function formatAuthors(authorsStr) {
 }
 
 // Create HTML for a single publication
-function createPublicationHTML(pub) {
+function createPublicationHTML(pub, number) {
     const title = pub.title || '';
     const authors = formatAuthors(pub.authors);
-    const venue = pub.venue || '';
-    
-    // Build links HTML - Paper, Preprint, and Code
-    const paperLink = pub.paper ? `<a href="${pub.paper}" class="pub-link" target="_blank">Paper</a>` : '';
-    const preprintLink = pub.preprint ? `<a href="${pub.preprint}" class="pub-link" target="_blank">Preprint</a>` : '';
-    const codeLink = pub.code ? `<a href="${pub.code}" class="pub-link" target="_blank">Code</a>` : '';
-    
-    const linksHTML = [paperLink, preprintLink, codeLink].filter(l => l).join('');
-    const linksSection = linksHTML ? `<div class="pub-links">${linksHTML}</div>` : '';
-    
+    const doi = (pub.doi || '').trim();
+    const venue = formatVenueWithDoi(pub.venue || '', doi);
+
+    // Link: prefer paper URL, fall back to preprint
+    const citationUrl = pub.paper || pub.preprint || '';
+    const pubId = (pub.pub_id || '').trim();
+    const isPreprint = pub.preprint && !pub.paper;
+
+    // Build additional links
+    const addLinks = [];
+    if (pub.has_pdf === 'TRUE' && pub.has_si === 'TRUE' && pubId)
+        addLinks.push(`<a href="/publications/files/${pubId}/${pubId}_all.pdf" class="pub-link" target="_blank">Main+SI PDF</a>`);
+    if (pub.has_pdf === 'TRUE' && pubId)
+        addLinks.push(`<a href="/publications/files/${pubId}/${pubId}_main.pdf" class="pub-link" target="_blank">Main PDF</a>`);
+    if (pub.has_si === 'TRUE' && pubId)
+        addLinks.push(`<a href="/publications/files/${pubId}/${pubId}_si.pdf" class="pub-link" target="_blank">SI PDF</a>`);
+    if (pub.github)
+        addLinks.push(`<a href="${pub.github}" class="pub-link" target="_blank">GitHub</a>`);
+    if (pub.readthedocs)
+        addLinks.push(`<a href="${pub.readthedocs}" class="pub-link" target="_blank">ReadTheDocs</a>`);
+    const additionalLinksHTML = addLinks.length > 0
+        ? `<div class="pub-additional-links">${addLinks.join(' | ')}</div>`
+        : '';
+    let itemClass = 'pub-item';
+    if (pub.led_by_kinney !== 'TRUE') {
+        itemClass += ' pub-item-collab';
+    } else if (isPreprint) {
+        itemClass += ' pub-item-preprint';
+    }
+
+    const citationInner = `
+                <h3 class="pub-title">${title}</h3>
+                <p class="pub-authors">${authors}</p>
+                <p class="pub-journal"><em>${venue}</em></p>`;
+
+    const citationHTML = citationUrl
+        ? `<a href="${citationUrl}" class="pub-citation-link" target="_blank">${citationInner}</a>`
+        : `<div>${citationInner}</div>`;
+
     return `
-        <div class="pub-item">
-            <h3 class="pub-title">${title}</h3>
-            <p class="pub-authors">${authors}</p>
-            <p class="pub-journal"><em>${venue}</em></p>
-            ${linksSection}
+        <div class="${itemClass}">
+            <span class="pub-number">${number}.</span>
+            <div class="pub-body">
+                ${citationHTML}
+                ${additionalLinksHTML}
+            </div>
         </div>
     `;
 }
 
 // Create HTML for a year section
-function createYearSectionHTML(year, publications) {
-    const pubsHTML = publications.map(p => createPublicationHTML(p)).join('');
-    
+function createYearSectionHTML(year, numberedPubs) {
+    const pubsHTML = numberedPubs.map(({pub, number}) => createPublicationHTML(pub, number)).join('');
+
     return `
         <div class="pub-year">
             <h2>${year}</h2>
@@ -375,10 +428,10 @@ function createYearSectionHTML(year, publications) {
 function renderPublications(publications) {
     const container = document.getElementById('publications-container');
     if (!container) return;
-    
+
     // Group by year while preserving CSV order within each year
     const byYear = {};
-    
+
     publications.forEach(pub => {
         const year = pub.year || 'Unknown';
         if (!byYear[year]) {
@@ -386,14 +439,22 @@ function renderPublications(publications) {
         }
         byYear[year].push(pub);
     });
-    
+
     // Sort years descending (newest first)
     const sortedYears = Object.keys(byYear).sort((a, b) => parseInt(b) - parseInt(a));
-    
-    // Build HTML (publications within each year stay in CSV order)
+
+    // Assign numbers: 1 = oldest, N = newest
+    // Walk in display order (years descending) and count down from total
+    let num = publications.length;
+    sortedYears.forEach(year => {
+        byYear[year].forEach(pub => { pub._number = num--; });
+    });
+
+    // Build HTML (years descending, publications within each year stay in CSV order)
     let html = '';
     sortedYears.forEach(year => {
-        html += createYearSectionHTML(year, byYear[year]);
+        const numberedPubs = byYear[year].map(pub => ({pub, number: pub._number}));
+        html += createYearSectionHTML(year, numberedPubs);
     });
     
     container.innerHTML = html;
@@ -404,7 +465,7 @@ async function loadPublications() {
     const container = document.getElementById('publications-container');
     if (!container) return;
     try {
-        const response = await fetch('/backend/scholar_publications.csv');
+        const response = await fetch('/backend/all_publications.csv');
         if (!response.ok) throw new Error('Failed to load CSV');
         const csvText = await response.text();
         const publications = parseCSV(csvText);
